@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Welcome to CurioSphere: Where Curiosity Meets Discovery",
+    "description": "Discover CurioSphere, your destination for exploring AI, science, business, education, culture, and the ideas shaping our world.",
+    "category": "Technology",
+    "subcategory": "Digital Discovery",
+    "author": "CurioSphere Editorial Team",
+    "date": "2026-10-11",
+    "featured": true,
+    "image": "",
+    "tags": [
+      "CurioSphere",
+      "Technology",
+      "Science",
+      "Learning",
+      "Discovery"
+    ],
+    "url": "articles/welcome-to-curiosphere-a-test-article.html"
+  }
+]

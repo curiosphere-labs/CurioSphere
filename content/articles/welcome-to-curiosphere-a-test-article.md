@@ -6,11 +6,9 @@ subcategory: Website Testing
 author: CurioSphere Editorial Team
 date: 2026-10-12
 status: Published
-featured: false
+featured: true
 tags:
   - test
-sources:
-  - website
 ---
 **Welcome to CurioSphere!**
 

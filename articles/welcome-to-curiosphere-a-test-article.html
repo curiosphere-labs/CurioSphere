@@ -3,149 +3,421 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="Discover CurioSphere, your destination for exploring AI, science, business, education, culture, and the ideas shaping our world.">
   <meta name="author" content="CurioSphere Editorial Team">
-
+  <meta name="theme-color" content="#10142b">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Welcome to CurioSphere: Where Curiosity Meets Discovery">
+  <meta property="og:description" content="Discover CurioSphere, your destination for exploring AI, science, business, education, culture, and the ideas shaping our world.">
+  <meta property="og:image" content="">
   <title>Welcome to CurioSphere: Where Curiosity Meets Discovery | CurioSphere</title>
-
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --ink: #19213b;
+      --muted: #68718a;
+      --navy: #10142b;
+      --purple: #7565e8;
+      --teal: #36c6b3;
+      --paper: #ffffff;
+      --canvas: #f5f6fb;
+      --line: #e6e8f1;
+      --soft-purple: #f0eeff;
+      --soft-teal: #e9fbf7;
+      --shadow: 0 20px 60px rgba(22, 28, 60, .09);
     }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
     body {
       margin: 0;
-      background: #f6f7fb;
-      color: #172033;
-      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+                   BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e4e7ef;
-      padding: 18px 5%;
+    a { color: #5748c9; text-underline-offset: 3px; }
+    a:hover { color: #34279e; }
+    .site-header {
+      background: rgba(16, 20, 43, .98);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.1);
     }
-
-    header a {
-      color: #172033;
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 17px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.22rem;
+      font-weight: 850;
+      letter-spacing: -.04em;
     }
-
-    main {
-      max-width: 850px;
-      margin: 38px auto;
-      padding: 32px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(23,32,51,.06);
+    .brand span { color: var(--teal); }
+    .header-tagline { color: #c5c9dd; font-size: .82rem; }
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 650;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      padding: 8px 14px;
+      white-space: nowrap;
     }
-
-    .category {
-      color: #5b4bdb;
-      font-weight: bold;
+    .back-link:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .page-wrap { max-width: 1180px; margin: 0 auto; padding: 30px 24px 64px; }
+    .breadcrumbs {
+      color: var(--muted);
+      font-size: .85rem;
+      margin: 0 0 22px;
     }
-
+    .breadcrumbs a { color: var(--muted); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple); }
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .article-top { max-width: 900px; margin: auto; padding: 48px 58px 30px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #5546c2;
+      background: var(--soft-purple);
+      border: 1px solid #e4e0ff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
     h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5.2vw, 4.15rem);
+      letter-spacing: -.045em;
+      line-height: 1.09;
+      margin: 22px 0 20px;
+      color: var(--navy);
+      text-wrap: balance;
     }
-
-    .meta {
-      color: #657087;
-      font-size: .95rem;
+    .dek {
+      color: #59627a;
+      font-size: clamp(1.06rem, 2vw, 1.24rem);
+      line-height: 1.65;
+      margin: 0 0 25px;
     }
-
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px 14px;
+      color: var(--muted);
+      font-size: .88rem;
+      border-top: 1px solid var(--line);
+      padding-top: 19px;
+    }
+    .byline strong { color: var(--ink); }
+    .dot { color: #b0b5c5; }
+    .hero-figure { margin: 0; background: #eceefa; }
     .hero-image {
+      display: block;
       width: 100%;
-      max-height: 460px;
+      max-height: 590px;
       object-fit: cover;
-      border-radius: 12px;
     }
-
-    article {
-      overflow-wrap: anywhere;
+    .hero-figure figcaption {
+      max-width: 900px;
+      margin: auto;
+      padding: 10px 24px 14px;
+      color: var(--muted);
+      font-size: .8rem;
     }
-
-    article img {
-      max-width: 100%;
-      height: auto;
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      gap: 46px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 42px 34px 56px;
     }
-
-    article a {
-      color: #5145cd;
+    .article-body { min-width: 0; font-size: 1.075rem; line-height: 1.9; }
+    .article-body > p:first-child {
+      font-size: 1.18rem;
+      color: #39425c;
     }
-
-    footer {
+    .article-body h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      margin: 2.15em 0 .65em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body h3 {
+      font-size: 1.28rem;
+      line-height: 1.35;
+      margin: 1.8em 0 .5em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body p { margin: 0 0 1.25em; }
+    .article-body ul, .article-body ol { padding-left: 1.45em; margin: 0 0 1.4em; }
+    .article-body li { padding-left: .25em; margin: .35em 0; }
+    .article-body strong { color: #22294a; }
+    .article-body blockquote {
+      margin: 1.8em 0;
+      padding: 22px 25px;
+      background: var(--soft-teal);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 14px 14px 0;
+      color: #254b50;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      line-height: 1.65;
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
+    .article-body code {
+      background: #f0f1f8;
+      padding: .15em .4em;
+      border-radius: 5px;
+      font-size: .88em;
+    }
+    .article-body .inline-figure {
+      margin: 1.5em 0;
+    }
+    .inline-figure img {
+      display: block; max-width: 100%; height: auto; border-radius: 14px;
+    }
+    .inline-figure figcaption { color: var(--muted); font-size: .82rem; }
+    .toc {
+      align-self: start;
+      position: sticky;
+      top: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fbfbff;
+      padding: 18px 18px 12px;
+      font-size: .86rem;
+    }
+    .toc summary {
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .toc ol { padding-left: 1.2em; margin: 8px 0; }
+    .toc li { margin: 7px 0; line-height: 1.45; }
+    .toc a { color: #626b83; text-decoration: none; }
+    .toc a:hover { color: var(--purple); }
+    .toc .toc-sub { margin-left: 8px; font-size: .82rem; }
+    .insight {
+      margin: 2.2em 0;
+      padding: 23px 25px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f0eeff, #eefbf8);
+      border: 1px solid #e3e3f7;
+    }
+    .insight-label {
+      color: #5546c2;
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .insight p { margin: 0; }
+    .article-end {
+      border-top: 1px solid var(--line);
+      margin-top: 38px;
+      padding-top: 24px;
+    }
+    .source-button {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+      margin: 4px 0 15px;
+    }
+    .source-button:hover { background: #292e55; color: #fff; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: #fafaff;
+      color: #626b83;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .78rem;
+    }
+    .article-bottom {
+      border-top: 1px solid var(--line);
+      background: #fafaff;
+      padding: 24px 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .article-bottom strong { color: var(--navy); }
+    .article-bottom p { margin: 3px 0 0; color: var(--muted); font-size: .9rem; }
+    .bottom-link {
+      display: inline-block; text-decoration: none; white-space: nowrap;
+      border-radius: 999px; padding: 10px 15px; background: var(--soft-purple);
+      color: #5142bd; font-size: .88rem; font-weight: 750;
+    }
+    .site-footer {
       text-align: center;
-      color: #657087;
-      padding: 25px;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 25px 20px 10px;
     }
-
-    @media (max-width: 600px) {
-      main {
-        margin: 16px;
-        padding: 20px;
-      }
+    .site-footer strong { color: var(--navy); }
+    @media (max-width: 850px) {
+      .article-layout { grid-template-columns: 1fr; gap: 24px; padding: 30px 28px 42px; }
+      .toc { position: static; grid-row: 1; }
+      .article-top { padding: 38px 32px 25px; }
+      .article-bottom { padding: 22px 32px; }
+    }
+    @media (max-width: 560px) {
+      .header-inner { padding: 14px 17px; }
+      .header-tagline { display: none; }
+      .page-wrap { padding: 18px 12px 38px; }
+      .article-card { border-radius: 17px; }
+      .article-top { padding: 28px 22px 22px; }
+      h1 { font-size: clamp(2.05rem, 10vw, 3rem); }
+      .dek { font-size: 1rem; }
+      .article-layout { padding: 23px 21px 32px; }
+      .article-body { font-size: 1rem; line-height: 1.8; }
+      .article-bottom { align-items: flex-start; flex-direction: column; padding: 22px; }
+      .byline { gap: 6px 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .site-header, .breadcrumbs, .toc, .article-bottom, .site-footer { display: none; }
+      .page-wrap { padding: 0; }
+      .article-card { box-shadow: none; border: 0; }
+      .article-layout { display: block; padding: 20px 0; }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <a href="../index.html">← CurioSphere</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">Curio<span>Sphere</span></a>
+      <span class="header-tagline">Explore Beyond the Ordinary</span>
+      <a class="back-link" href="../index.html">← Explore stories</a>
+    </div>
   </header>
 
-  <main>
-    <div class="category">Technology</div>
+  <div class="page-wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> &nbsp;›&nbsp;
+      <span>Technology</span>
+       &nbsp;›&nbsp; <span>Digital Discovery</span>
+    </nav>
 
-    <h1>Welcome to CurioSphere: Where Curiosity Meets Discovery</h1>
+    <main class="article-card">
+      <section class="article-top">
+        <div class="eyebrow">Technology</div>
+        <h1>Welcome to CurioSphere: Where Curiosity Meets Discovery</h1>
+        <p class="dek">Discover CurioSphere, your destination for exploring AI, science, business, education, culture, and the ideas shaping our world.</p>
+        <div class="byline">
+          <span>By <strong>CurioSphere Editorial Team</strong></span>
+          <span class="dot">•</span>
+          <time datetime="2026-10-11">2026-10-11</time>
+          <span class="dot">•</span>
+          <span>2 min read</span>
+        </div>
+      </section>
 
-    <p class="meta">By CurioSphere Editorial Team · 2026-10-11</p>
+      
 
-    
+      <div class="article-layout">
+        <article class="article-body">
+          <h1 id="welcome-to-curiosphere-where-curiosity-meets-discovery">Welcome to CurioSphere: Where Curiosity Meets Discovery</h1>
+<p>Every great discovery begins with a question.</p>
+<p>How is artificial intelligence changing the way we live and work? What scientific breakthroughs could transform our future? How can we develop new skills, understand different cultures, and make better decisions in an increasingly digital world?</p>
+<p>At <strong>CurioSphere</strong>, we believe that curiosity is more than a habit. It is the starting point of learning, innovation, and personal growth.</p>
+<p>Welcome to a space designed for curious minds, lifelong learners, ambitious professionals, and anyone who enjoys discovering something new.</p>
+<h2 id="a-world-of-ideas-one-destination">A World of Ideas, One Destination</h2>
+<p>Information is everywhere, but finding knowledge that is useful, understandable, and relevant can be challenging.</p>
+<p>CurioSphere aims to make that journey simpler. We bring together interesting ideas, practical insights, emerging trends, and learning opportunities across subjects that influence our everyday lives.</p>
+<p>Whether you are exploring a new technology, looking for career inspiration, or simply trying to understand how the world works, there is always something new to discover.</p>
+<h2 id="what-can-you-explore">What Can You Explore?</h2>
+<p>CurioSphere brings together six areas of discovery.</p>
+<h3 id="ai-technology">AI &amp; Technology</h3>
+<p>Explore artificial intelligence, generative AI, emerging technologies, digital innovation, and the tools transforming how we work and communicate.</p>
+<h3 id="science-discovery">Science &amp; Discovery</h3>
+<p>Discover scientific breakthroughs, fascinating facts, space exploration, and the remarkable ideas that help explain our universe.</p>
+<h3 id="business-careers">Business &amp; Careers</h3>
+<p>Learn about professional development, business trends, workplace skills, entrepreneurship, and opportunities for the future.</p>
+<h3 id="education-learning">Education &amp; Learning</h3>
+<p>Find learning resources, skill-development ideas, educational insights, and new ways to expand your knowledge.</p>
+<h3 id="india-culture">India &amp; Culture</h3>
+<p>Explore India's heritage, traditions, achievements, cultural diversity, and the stories that connect people across generations.</p>
+<h3 id="digital-lifestyle">Digital Lifestyle</h3>
+<p>Understand the digital world around you, from useful online tools and productivity techniques to smarter and safer ways of using technology.</p>
+<h2 id="built-around-curiosity">Built Around Curiosity</h2>
+<p>Our goal is not simply to share information. It is to encourage readers to ask better questions, explore unfamiliar subjects, and turn knowledge into meaningful action.</p>
+<p>We want CurioSphere to grow into a destination where learning feels accessible, ideas spark conversations, and discovery never stops.</p>
+<p>As the platform evolves, we hope to bring you informative articles, practical guides, useful resources, and fresh perspectives on the subjects that matter.</p>
+<h2 id="the-journey-begins">The Journey Begins</h2>
+<p>This is the beginning of our journey, and we are glad you are here.</p>
+<p>Explore a topic that interests you. Discover something you did not know yesterday. Share an idea. Ask a question. Let your curiosity lead the way.</p>
+<p>Because every new idea begins with the willingness to explore.</p>
+<p><strong>Welcome to CurioSphere.</strong></p>
+<p><em>Curiosity today. Possibilities tomorrow.</em></p>
+          <section class="insight" aria-label="CurioSphere Insight">
+            <div class="insight-label">CurioSphere Insight</div>
+            <p>Curiosity is the beginning of discovery. Keep asking questions, examine the evidence, and explore the ideas that shape our world.</p>
+          </section>
+          <div class="article-end">
+            <h3>References &amp; further reading</h3>
+            <p>Explore the original sources and reliable references linked within this article to learn more.</p>
+            
+            <div class="tag-list" aria-label="Article tags"><span class="tag">CurioSphere</span><span class="tag">Technology</span><span class="tag">Science</span><span class="tag">Learning</span><span class="tag">Discovery</span></div>
+          </div>
+        </article>
+        <nav class="toc" aria-label="Table of contents"><details open><summary>In this article</summary><ol><li><a href="#welcome-to-curiosphere-where-curiosity-meets-discovery">Welcome to CurioSphere: Where Curiosity Meets Discovery</a></li><li><a href="#a-world-of-ideas-one-destination">A World of Ideas, One Destination</a></li><li><a href="#what-can-you-explore">What Can You Explore?</a></li><li class="toc-sub"><a href="#ai-technology">AI &amp; Technology</a></li><li class="toc-sub"><a href="#science-discovery">Science &amp; Discovery</a></li><li class="toc-sub"><a href="#business-careers">Business &amp; Careers</a></li><li class="toc-sub"><a href="#education-learning">Education &amp; Learning</a></li><li class="toc-sub"><a href="#india-culture">India &amp; Culture</a></li><li class="toc-sub"><a href="#digital-lifestyle">Digital Lifestyle</a></li><li><a href="#built-around-curiosity">Built Around Curiosity</a></li><li><a href="#the-journey-begins">The Journey Begins</a></li></ol></details></nav>
+      </div>
 
-    <p>Discover CurioSphere, your destination for exploring AI, science, business, education, culture, and the ideas shaping our world.</p>
+      <div class="article-bottom">
+        <div>
+          <strong>Enjoyed exploring this story?</strong>
+          <p>Discover more ideas and perspectives with CurioSphere.</p>
+        </div>
+        <a class="bottom-link" href="../index.html">Back to CurioSphere →</a>
+      </div>
+    </main>
 
-    <article><h1>Welcome to CurioSphere: Where Curiosity Meets Discovery</h1>
-Every great discovery begins with a question.
-How is artificial intelligence changing the way we live and work? What scientific breakthroughs could transform our future? How can we develop new skills, understand different cultures, and make better decisions in an increasingly digital world?
-At <strong>CurioSphere</strong>, we believe that curiosity is more than a habit. It is the starting point of learning, innovation, and personal growth.
-Welcome to a space designed for curious minds, lifelong learners, ambitious professionals, and anyone who enjoys discovering something new.
-<h2>A World of Ideas, One Destination</h2>
-Information is everywhere, but finding knowledge that is useful, understandable, and relevant can be challenging.
-CurioSphere aims to make that journey simpler. We bring together interesting ideas, practical insights, emerging trends, and learning opportunities across subjects that influence our everyday lives.
-Whether you are exploring a new technology, looking for career inspiration, or simply trying to understand how the world works, there is always something new to discover.
-<h2>What Can You Explore?</h2>
-CurioSphere brings together six areas of discovery.
-<h3>AI &amp; Technology</h3>
-Explore artificial intelligence, generative AI, emerging technologies, digital innovation, and the tools transforming how we work and communicate.
-<h3>Science &amp; Discovery</h3>
-Discover scientific breakthroughs, fascinating facts, space exploration, and the remarkable ideas that help explain our universe.
-<h3>Business &amp; Careers</h3>
-Learn about professional development, business trends, workplace skills, entrepreneurship, and opportunities for the future.
-<h3>Education &amp; Learning</h3>
-Find learning resources, skill-development ideas, educational insights, and new ways to expand your knowledge.
-<h3>India &amp; Culture</h3>
-Explore India's heritage, traditions, achievements, cultural diversity, and the stories that connect people across generations.
-<h3>Digital Lifestyle</h3>
-Understand the digital world around you, from useful online tools and productivity techniques to smarter and safer ways of using technology.
-<h2>Built Around Curiosity</h2>
-Our goal is not simply to share information. It is to encourage readers to ask better questions, explore unfamiliar subjects, and turn knowledge into meaningful action.
-We want CurioSphere to grow into a destination where learning feels accessible, ideas spark conversations, and discovery never stops.
-As the platform evolves, we hope to bring you informative articles, practical guides, useful resources, and fresh perspectives on the subjects that matter.
-<h2>The Journey Begins</h2>
-This is the beginning of our journey, and we are glad you are here.
-Explore a topic that interests you. Discover something you did not know yesterday. Share an idea. Ask a question. Let your curiosity lead the way.
-Because every new idea begins with the willingness to explore.
-<strong>Welcome to CurioSphere.</strong>
-<em>Curiosity today. Possibilities tomorrow.</em></article>
-  </main>
-
-  <footer>
-    © CurioSphere · Explore Beyond the Ordinary
-  </footer>
+    <footer class="site-footer">
+      <strong>CurioSphere</strong> · Explore Beyond the Ordinary<br>
+      Thoughtful stories for curious minds.
+    </footer>
+  </div>
 </body>
 </html>

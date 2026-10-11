@@ -1,0 +1,96 @@
+media:
+  - name: media
+    label: Media
+    input: media
+    output: /media
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields:
+        - title
+        - category
+        - status
+        - date
+      sort:
+        - date
+      order: desc
+    fields:
+      - name: title
+        label: Article Title
+        type: string
+        required: true
+
+      - name: description
+        label: Short Description
+        type: text
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Technology
+            - Science
+            - Business
+            - Culture
+            - Education
+            - Health
+            - Environment
+            - Current Affairs
+
+      - name: subcategory
+        label: Subcategory
+        type: string
+
+      - name: author
+        label: Author
+        type: string
+
+      - name: date
+        label: Publication Date
+        type: date
+
+      - name: status
+        label: Publication Status
+        type: select
+        required: true
+        options:
+          values:
+            - Draft
+            - Published
+
+      - name: featured
+        label: Feature on Homepage
+        type: boolean
+
+      - name: image
+        label: Featured Image
+        type: image
+
+      - name: image_credit
+        label: Image Credit
+        type: string
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+
+      - name: sources
+        label: Source Links
+        type: string
+        list: true
+
+      - name: body
+        label: Article Content
+        type: rich-text
+        required: true

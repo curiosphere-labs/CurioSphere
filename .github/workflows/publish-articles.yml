@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - "content/articles/**"
-      - "scripts/**"
+      - "1. scripts/**"
       - ".github/workflows/publish-articles.yml"
 
 permissions:
@@ -18,8 +18,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  prepare:
-    name: Validate article files
+  build:
+    name: Validate and Generate Articles
     runs-on: ubuntu-latest
 
     steps:
@@ -35,13 +35,13 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
           import sys
 
           article_dir = Path("content/articles")
 
           if not article_dir.exists():
-              print("No content/articles directory found.")
-              sys.exit(1)
+              sys.exit("ERROR: content/articles directory not found.")
 
           files = list(article_dir.glob("*.md"))
 
@@ -54,29 +54,40 @@ jobs:
           for file in files:
               content = file.read_text(encoding="utf-8")
 
-              if not content.startswith("---"):
-                  errors.append(f"{file}: missing YAML front matter")
+              if not content.startswith("---\n"):
+                  errors.append(f"{file}: missing YAML frontmatter")
                   continue
 
               parts = content.split("---", 2)
 
               if len(parts) < 3:
-                  errors.append(f"{file}: invalid front matter")
+                  errors.append(f"{file}: invalid frontmatter")
                   continue
 
               metadata = parts[1]
 
-              for field in ("title:", "description:", "category:", "status:"):
-                  if field not in metadata:
+              for field in ("title", "description", "category", "status"):
+                  if not re.search(
+                      rf"(?m)^{re.escape(field)}\s*:",
+                      metadata
+                  ):
                       errors.append(f"{file}: missing {field}")
 
-              print(f"Checked: {file}")
-
           if errors:
-              print("\nValidation errors:")
-              for error in errors:
-                  print("-", error)
+              print("\n".join(errors))
               sys.exit(1)
 
-          print("\nArticle metadata validation completed.")
+          print(f"Validated {len(files)} article file(s).")
           PY
+
+      - name: Generate published article pages
+        run: python "1. scripts/build_articles.py"
+
+      - name: Upload generated website files
+        uses: actions/upload-artifact@v4
+        with:
+          name: curiosphere-generated-articles
+          path: |
+            articles/
+            articles-index.json
+          if-no-files-found: error

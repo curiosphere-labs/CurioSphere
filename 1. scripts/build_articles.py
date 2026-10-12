@@ -347,7 +347,7 @@ content_html = re.sub(
 
 content_html, toc_html = build_toc_and_ids(content_html)
 
-    tags = article.get("tags", [])
+tags = article.get("tags", [])
     if isinstance(tags, str):
         tags = [tags] if tags else []
     if not isinstance(tags, list):

@@ -344,11 +344,16 @@ def make_page(article, body):
         heading_text = html.unescape(re.sub(r"<[^>]+>", "", match.group(1))).strip()
         return "" if heading_text.casefold() == title_for_compare else match.group(0)
 
+    # markdown_to_html creates headings with a data-toc-title attribute,
+    # so match any opening H1 tag rather than assuming it has no attributes.
+    # Only the first body heading is considered, and it is removed only
+    # when its visible text matches the title in the article frontmatter.
     content_html = re.sub(
-        r"^\s*<h1(?:\s+id=\"[^\"]*\")?>(.*?)</h1>\s*",
+        r"^\s*<h1\b[^>]*>(.*?)</h1>\s*",
         remove_duplicate_title,
         content_html,
         count=1,
+        flags=re.IGNORECASE,
     )
 
     content_html, toc_html = build_toc_and_ids(content_html)

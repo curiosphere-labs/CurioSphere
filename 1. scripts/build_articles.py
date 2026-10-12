@@ -335,7 +335,17 @@ def make_page(article, body):
         )
 
     content_html = markdown_to_html(body)
-    content_html, toc_html = build_toc_and_ids(content_html)
+
+# Remove the first heading if it duplicates the article title.
+content_html = re.sub(
+    r'^\s*<h1(?:\s+id="[^"]*")?>(.*?)</h1>\s*',
+    lambda m: "" if html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip().casefold()
+    == str(article.get("title", "")).strip().casefold() else m.group(0),
+    content_html,
+    count=1,
+)
+
+content_html, toc_html = build_toc_and_ids(content_html)
 
     tags = article.get("tags", [])
     if isinstance(tags, str):

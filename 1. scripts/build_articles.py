@@ -129,9 +129,10 @@ def format_inline(text):
     # Inline code
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
 
-    # Images: ![alt text](https://...)
+    # Images: support both external URLs and local relative paths.
+    # Example local path: ../assets/images/india-living-heritage/indian-handloom.jpeg
     text = re.sub(
-        r'!\[([^\]]*)\]\((https?://[^\s)]+)\)',
+        r'!\[([^\]]*)\]\(([^)\s]+)\)',
         lambda m: (
             '<figure class="inline-figure">'
             '<img src="' + escape_attr(m.group(2)) +
@@ -301,7 +302,12 @@ def make_page(article, body):
     subcategory_raw = str(article.get("subcategory", ""))
     author_raw = str(article.get("author", "CurioSphere Editorial Team"))
     published_raw = str(article.get("date", date.today().isoformat()))
-    image = safe_url(article.get("image", ""))
+    image_source = safe_url(article.get("image", ""))
+    image = image_source
+    # Article HTML lives in /articles/, so prefix local site-root assets with ../
+    # Frontmatter should use assets/... so the homepage index can use the same path.
+    if image and not image.startswith(("https://", "http://", "/", "../")):
+        image = "../" + image.lstrip("./")
     image_caption = str(article.get("image_caption", ""))
     image_credit = str(article.get("image_credit", ""))
     source_url = safe_url(article.get("source_url", ""))
@@ -844,7 +850,11 @@ def main():
             "author": str(article.get("author", "CurioSphere Editorial Team")),
             "date": article_date,
             "featured": as_bool(article.get("featured", False)),
-            "image": safe_url(article.get("image", "")),
+            "image": (
+                safe_url(article.get("image", "")).removeprefix("../")
+                if safe_url(article.get("image", "")).startswith("../")
+                else safe_url(article.get("image", ""))
+            ),
             "tags": tags,
             "url": f"articles/{slug}.html"
         }
@@ -880,3 +890,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

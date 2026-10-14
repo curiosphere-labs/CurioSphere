@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From handloom weaving and folk music to food, festivals and family stories, discover why India’s living heritage matters—and how the next generation can help preserve it.">
+  <meta name="author" content="CurioSphere Editorial">
+  <meta name="theme-color" content="#10142b">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="India’s Living Heritage: How Everyday Traditions Keep Culture Alive">
+  <meta property="og:description" content="From handloom weaving and folk music to food, festivals and family stories, discover why India’s living heritage matters—and how the next generation can help preserve it.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
+  <title>India’s Living Heritage: How Everyday Traditions Keep Culture Alive | CurioSphere</title>
+  <style>
+    :root {
+      --ink: #19213b;
+      --muted: #68718a;
+      --navy: #10142b;
+      --purple: #7565e8;
+      --teal: #36c6b3;
+      --paper: #ffffff;
+      --canvas: #f5f6fb;
+      --line: #e6e8f1;
+      --soft-purple: #f0eeff;
+      --soft-teal: #e9fbf7;
+      --shadow: 0 20px 60px rgba(22, 28, 60, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+                   BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #5748c9; text-underline-offset: 3px; }
+    a:hover { color: #34279e; }
+    .site-header {
+      background: rgba(16, 20, 43, .98);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 17px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.22rem;
+      font-weight: 850;
+      letter-spacing: -.04em;
+    }
+    .brand span { color: var(--teal); }
+    .header-tagline { color: #c5c9dd; font-size: .82rem; }
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 650;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      padding: 8px 14px;
+      white-space: nowrap;
+    }
+    .back-link:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .page-wrap { max-width: 1180px; margin: 0 auto; padding: 30px 24px 64px; }
+    .breadcrumbs {
+      color: var(--muted);
+      font-size: .85rem;
+      margin: 0 0 22px;
+    }
+    .breadcrumbs a { color: var(--muted); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple); }
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .article-top { max-width: 900px; margin: auto; padding: 48px 58px 30px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #5546c2;
+      background: var(--soft-purple);
+      border: 1px solid #e4e0ff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5.2vw, 4.15rem);
+      letter-spacing: -.045em;
+      line-height: 1.09;
+      margin: 22px 0 20px;
+      color: var(--navy);
+      text-wrap: balance;
+    }
+    .dek {
+      color: #59627a;
+      font-size: clamp(1.06rem, 2vw, 1.24rem);
+      line-height: 1.65;
+      margin: 0 0 25px;
+    }
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px 14px;
+      color: var(--muted);
+      font-size: .88rem;
+      border-top: 1px solid var(--line);
+      padding-top: 19px;
+    }
+    .byline strong { color: var(--ink); }
+    .dot { color: #b0b5c5; }
+    .hero-figure { margin: 0; background: #eceefa; }
+    .hero-image {
+      display: block;
+      width: 100%;
+      max-height: 590px;
+      object-fit: cover;
+    }
+    .hero-figure figcaption {
+      max-width: 900px;
+      margin: auto;
+      padding: 10px 24px 14px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      gap: 46px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 42px 34px 56px;
+    }
+    .article-body { min-width: 0; font-size: 1.075rem; line-height: 1.9; }
+    .article-body > p:first-child {
+      font-size: 1.18rem;
+      color: #39425c;
+    }
+    .article-body h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      margin: 2.15em 0 .65em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body h3 {
+      font-size: 1.28rem;
+      line-height: 1.35;
+      margin: 1.8em 0 .5em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body p { margin: 0 0 1.25em; }
+    .article-body ul, .article-body ol { padding-left: 1.45em; margin: 0 0 1.4em; }
+    .article-body li { padding-left: .25em; margin: .35em 0; }
+    .article-body strong { color: #22294a; }
+    .article-body blockquote {
+      margin: 1.8em 0;
+      padding: 22px 25px;
+      background: var(--soft-teal);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 14px 14px 0;
+      color: #254b50;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      line-height: 1.65;
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
+    .article-body code {
+      background: #f0f1f8;
+      padding: .15em .4em;
+      border-radius: 5px;
+      font-size: .88em;
+    }
+    .article-body .inline-figure {
+      margin: 1.5em 0;
+    }
+    .inline-figure img {
+      display: block; max-width: 100%; height: auto; border-radius: 14px;
+    }
+    .inline-figure figcaption { color: var(--muted); font-size: .82rem; }
+    .toc {
+      align-self: start;
+      position: sticky;
+      top: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fbfbff;
+      padding: 18px 18px 12px;
+      font-size: .86rem;
+    }
+    .toc summary {
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .toc ol { padding-left: 1.2em; margin: 8px 0; }
+    .toc li { margin: 7px 0; line-height: 1.45; }
+    .toc a { color: #626b83; text-decoration: none; }
+    .toc a:hover { color: var(--purple); }
+    .toc .toc-sub { margin-left: 8px; font-size: .82rem; }
+    .insight {
+      margin: 2.2em 0;
+      padding: 23px 25px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f0eeff, #eefbf8);
+      border: 1px solid #e3e3f7;
+    }
+    .insight-label {
+      color: #5546c2;
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .insight p { margin: 0; }
+    .article-end {
+      border-top: 1px solid var(--line);
+      margin-top: 38px;
+      padding-top: 24px;
+    }
+    .source-button {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+      margin: 4px 0 15px;
+    }
+    .source-button:hover { background: #292e55; color: #fff; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: #fafaff;
+      color: #626b83;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .78rem;
+    }
+    .article-bottom {
+      border-top: 1px solid var(--line);
+      background: #fafaff;
+      padding: 24px 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .article-bottom strong { color: var(--navy); }
+    .article-bottom p { margin: 3px 0 0; color: var(--muted); font-size: .9rem; }
+    .bottom-link {
+      display: inline-block; text-decoration: none; white-space: nowrap;
+      border-radius: 999px; padding: 10px 15px; background: var(--soft-purple);
+      color: #5142bd; font-size: .88rem; font-weight: 750;
+    }
+    .site-footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 25px 20px 10px;
+    }
+    .site-footer strong { color: var(--navy); }
+    @media (max-width: 850px) {
+      .article-layout { grid-template-columns: 1fr; gap: 24px; padding: 30px 28px 42px; }
+      .toc { position: static; grid-row: 1; }
+      .article-top { padding: 38px 32px 25px; }
+      .article-bottom { padding: 22px 32px; }
+    }
+    @media (max-width: 560px) {
+      .header-inner { padding: 14px 17px; }
+      .header-tagline { display: none; }
+      .page-wrap { padding: 18px 12px 38px; }
+      .article-card { border-radius: 17px; }
+      .article-top { padding: 28px 22px 22px; }
+      h1 { font-size: clamp(2.05rem, 10vw, 3rem); }
+      .dek { font-size: 1rem; }
+      .article-layout { padding: 23px 21px 32px; }
+      .article-body { font-size: 1rem; line-height: 1.8; }
+      .article-bottom { align-items: flex-start; flex-direction: column; padding: 22px; }
+      .byline { gap: 6px 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .site-header, .breadcrumbs, .toc, .article-bottom, .site-footer { display: none; }
+      .page-wrap { padding: 0; }
+      .article-card { box-shadow: none; border: 0; }
+      .article-layout { display: block; padding: 20px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">Curio<span>Sphere</span></a>
+      <span class="header-tagline">Explore Beyond the Ordinary</span>
+      <a class="back-link" href="../index.html">← Explore stories</a>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> &nbsp;›&nbsp;
+      <span>India &amp; Culture</span>
+       &nbsp;›&nbsp; <span>Living Heritage</span>
+    </nav>
+
+    <main class="article-card">
+      <section class="article-top">
+        <div class="eyebrow">India &amp; Culture</div>
+        <h1>India’s Living Heritage: How Everyday Traditions Keep Culture Alive</h1>
+        <p class="dek">From handloom weaving and folk music to food, festivals and family stories, discover why India’s living heritage matters—and how the next generation can help preserve it.</p>
+        <div class="byline">
+          <span>By <strong>CurioSphere Editorial</strong></span>
+          <span class="dot">•</span>
+          <time datetime="2026-10-14">2026-10-14</time>
+          <span class="dot">•</span>
+          <span>8 min read</span>
+        </div>
+      </section>
+
+      <figure class="hero-figure"><img class="hero-image" src="https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="India’s Living Heritage: How Everyday Traditions Keep Culture Alive" fetchpriority="high"></figure>
+
+      <div class="article-layout">
+        <article class="article-body">
+          <p>India’s cultural heritage is often pictured through grand monuments, ancient temples, forts and palaces. These places matter, but culture is much more than what can be preserved behind museum glass. It also lives in the songs people sing while working, the recipes passed from one generation to another, the patterns woven into a sari, the stories grandparents tell, and the festivals that bring neighbours together.</p>
+<p>This is <strong>living heritage</strong>: knowledge, skills, expressions and practices that communities recognise as part of their identity and continue to pass on. It is not frozen in the past. It survives because people practise it, adapt it and teach it to others.</p>
+<p><figure class="inline-figure"><img src="https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&amp;amp;fit=crop&amp;amp;w=1600&amp;amp;q=85" alt="Colourful Indian traditional textiles and craftwork" loading="lazy"><figcaption>Colourful Indian traditional textiles and craftwork</figcaption></figure></p>
+<h2 id="culture-is-not-only-a-monument">Culture is not only a monument</h2>
+<p>A monument can be protected through restoration, documentation and careful management. Living traditions need something equally important: people who continue to use and understand them.</p>
+<p>Think of a traditional weaving technique. The finished textile is visible, but the knowledge behind it may include choosing fibres, preparing dyes, setting a loom, recognising patterns and understanding the meaning of a design. If the craftsperson who knows these skills has no apprentice, the object may survive while the knowledge disappears.</p>
+<p>The same is true of oral storytelling, folk theatre, regional music, culinary practices and community celebrations. Their future depends on opportunities to practise them, not simply on taking photographs of them.</p>
+<p>India’s Ministry of Culture recognises intangible cultural heritage as including expressions such as songs, dances, rituals, languages and crafts. These traditions are diverse because they belong to communities with different histories, environments and experiences. Read more on the <a href="https://culture.gov.in/intangible-cultural-heritage" target="_blank" rel="noopener noreferrer">Ministry of Culture’s overview of intangible cultural heritage</a>.</p>
+<h2 id="six-everyday-places-where-heritage-lives">Six everyday places where heritage lives</h2>
+<h3 id="1-languages-and-stories">1. Languages and stories</h3>
+<p>A language carries more than vocabulary. It can preserve local names for plants, weather, landscapes, relationships, humour and ways of seeing the world. Proverbs, lullabies, folktales and family anecdotes can communicate ideas that are difficult to translate exactly.</p>
+<p>When younger family members learn a grandparent’s language or ask for a story from childhood, they help keep that knowledge in circulation. Recording a story—with the storyteller’s permission—can also create a useful family archive. A recording is not a replacement for speaking the language, but it can support learning and remembrance.</p>
+<h3 id="2-food-and-the-knowledge-of-place">2. Food and the knowledge of place</h3>
+<p>Recipes often reflect geography, climate, agriculture, trade and family history. The grains grown in one region, the spices used in another, and the methods used to preserve seasonal ingredients all tell a story about how people adapted to their surroundings.</p>
+<p>A family recipe may never have been written down. Measurements might be described as a handful, a pinch or a particular texture. Learning it therefore involves watching, listening, tasting and practising—not just copying an ingredient list.</p>
+<p>Food traditions also evolve. Families adapt recipes when ingredients become unavailable, when people move to new cities, or when dietary needs change. Adaptation does not automatically erase tradition; it can be one way a tradition remains relevant.</p>
+<h3 id="3-handloom-textiles-and-crafts">3. Handloom, textiles and crafts</h3>
+<p>India’s textile traditions include many regional weaving, printing, embroidery and dyeing practices. A textile can express local materials, skilled labour, design knowledge and the identity of the people who make it.</p>
+<p>Yet appreciation needs to go beyond buying something that looks traditional. Ask who made it, where it was produced, what technique was used and whether the maker or artisan group is being fairly represented. When possible, purchase directly from credible cooperatives, craft organisations or makers who explain their work transparently.</p>
+<p>A craft survives when there is both knowledge and a viable livelihood. Documentation and exhibitions can build awareness, but demand for authentic work and respect for skilled labour also matter.</p>
+<h3 id="4-music-dance-and-folk-performance">4. Music, dance and folk performance</h3>
+<p>Classical and folk forms are taught through practice, repetition, observation and guidance. Performances may be associated with particular communities, seasonal events, religious occasions or local histories.</p>
+<p>A short social-media clip can introduce an audience to a performance, but it may not communicate the full context. If sharing a traditional performance online, identify the form and region accurately, credit performers when known, and avoid presenting one community’s practice as if it represents all of India.</p>
+<h3 id="5-festivals-and-community-rituals">5. Festivals and community rituals</h3>
+<p>Festivals can bring together food, music, craft, worship, public art and family gatherings. Their meaning may differ across communities, and even a single festival can be celebrated differently from one region or household to another.</p>
+<p>The most respectful way to learn is to ask participants how they understand a practice rather than assuming that one explanation fits everyone. Cultural curiosity should make room for differences within a tradition, not just differences between traditions.</p>
+<h3 id="6-architecture-neighbourhoods-and-local-memory">6. Architecture, neighbourhoods and local memory</h3>
+<p>Heritage also lives in old marketplaces, village ponds, traditional houses, historic streets, community spaces and the memories attached to them. These places can show how people traded, travelled, built homes and organised daily life.</p>
+<p>A neighbourhood walk can become a small research project: photograph details where permitted, note the names of places, ask residents about changes over time, and compare memories with reliable historical records. Be considerate of residents’ privacy and remember that a living neighbourhood is a home, not merely a backdrop.</p>
+<p><figure class="inline-figure"><img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;amp;fit=crop&amp;amp;w=1600&amp;amp;q=85" alt="Traditional architecture and a historic place in India" loading="lazy"><figcaption>Traditional architecture and a historic place in India</figcaption></figure></p>
+<h2 id="why-living-heritage-can-become-fragile">Why living heritage can become fragile</h2>
+<p>Traditions change naturally, but some face pressures that make passing them on difficult.</p>
+<ul>
+<li><strong>Fewer learning opportunities:</strong> Young people may live far from the people who hold specialist knowledge.</li>
+<li><strong>Uncertain livelihoods:</strong> Time-consuming craft and performance traditions can be hard to sustain if practitioners cannot earn a fair income.</li>
+<li><strong>Language shift:</strong> When a language is no longer used in everyday conversation, stories and specialised vocabulary may become harder to pass on.</li>
+<li><strong>Oversimplification:</strong> Online posts can strip a practice of its regional context or repeat inaccurate claims.</li>
+<li><strong>Loss of materials and spaces:</strong> Changes in land use, access to natural materials or the availability of performance spaces can affect traditional skills.</li>
+<li><strong>Documentation without participation:</strong> Recording a tradition is useful, but it should not replace the community’s role in deciding how its knowledge is represented and shared.</li>
+</ul>
+<p>Preservation should not mean forcing people to perform a tradition exactly as it was performed centuries ago. Communities should have room to decide what to continue, what to adapt and what to keep private.</p>
+<h2 id="can-digital-technology-help-preserve-culture">Can digital technology help preserve culture?</h2>
+<p>Yes—when used thoughtfully. A clear audio recording of a folk song, a video of an artisan explaining a technique, a digital collection of family photographs or a map of local heritage sites can help knowledge travel beyond its original setting.</p>
+<p>Digital archives also make it easier to search, organise and share material. But the quality of the archive depends on accurate descriptions, consent, context and long-term care. A file without a name, date, location or explanation may be difficult for future generations to understand.</p>
+<p>Before recording or publishing a cultural practice, consider these questions:</p>
+<ol>
+<li>Has the person or community agreed to be recorded and to the intended use?</li>
+<li>Is the description accurate about the region, language, community and context?</li>
+<li>Are the people who contributed the knowledge credited in the way they prefer?</li>
+<li>Is any part of the practice sacred, restricted or not meant for public sharing?</li>
+<li>Will the digital copy be stored safely and remain accessible?</li>
+</ol>
+<p>Technology can support preservation, but it cannot replace trust or the relationship between a tradition and the people who carry it.</p>
+<h2 id="five-practical-ways-to-help-keep-traditions-alive">Five practical ways to help keep traditions alive</h2>
+<h3 id="ask-listen-and-record-respectfully">Ask, listen and record respectfully</h3>
+<p>Invite older relatives or community members to explain a song, recipe, place name, craft or childhood game. Ask permission before recording, and let them correct your notes.</p>
+<h3 id="learn-from-practitioners">Learn from practitioners</h3>
+<p>Attend a workshop, performance or demonstration led by people who know the tradition. Learning directly is often more meaningful than relying only on short online summaries.</p>
+<h3 id="support-skilled-makers-fairly">Support skilled makers fairly</h3>
+<p>When buying traditional crafts, look for transparent information about the maker, materials and technique. Avoid assuming that a low price is always a good deal if it depends on undervaluing skilled work.</p>
+<h3 id="share-context-not-just-pictures">Share context, not just pictures</h3>
+<p>When posting a festival, textile, dance or building online, include the correct name and location where known. Credit creators, check claims and avoid presenting a single example as universal.</p>
+<h3 id="make-culture-part-of-ordinary-life">Make culture part of ordinary life</h3>
+<p>Cook a family dish, learn a song, speak a regional language, visit a local museum, or take a child to meet a craft practitioner. Repeated everyday practice is often more powerful than an occasional heritage celebration.</p>
+<h2 id="a-note-on-respect-and-cultural-ownership">A note on respect and cultural ownership</h2>
+<p>Culture is shared in many ways, but not every cultural expression is free of responsibility or restrictions. Some knowledge belongs to particular communities; some practices require permission; and some objects or performances have religious, ceremonial or personal significance.</p>
+<p>Responsible curiosity means being willing to learn—and equally willing to respect a boundary. The people who sustain a tradition should have a meaningful voice in how it is documented, represented and passed on.</p>
+<h2 id="the-future-of-indian-heritage-is-being-made-today">The future of Indian heritage is being made today</h2>
+<p>India’s heritage is not only a collection of things inherited from the past. It is also a living relationship between generations. A song remains alive when it is sung; a craft remains alive when its skills are taught; a language remains alive when people use it; and a family story remains alive when someone takes the time to listen.</p>
+<p>We do not need to be historians or experts to contribute. We can begin with one question, one conversation, one visit or one skill learned from someone who knows it well.</p>
+<p><strong>The most meaningful way to preserve a living tradition is to help create the conditions in which people can continue to practise it with dignity, pride and choice.</strong></p>
+<hr>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://culture.gov.in/intangible-cultural-heritage" target="_blank" rel="noopener noreferrer">Ministry of Culture, Government of India — Intangible Cultural Heritage</a></li>
+<li><a href="https://ich.unesco.org/en/what-is-intangible-heritage-00003" target="_blank" rel="noopener noreferrer">UNESCO — Intangible Cultural Heritage</a></li>
+</ul>
+<p><em>Editorial note: This article is intended as an accessible introduction. Traditions vary by region and community; readers should consult practitioners and reliable local sources for specific practices.</em></p>
+          <section class="insight" aria-label="CurioSphere Insight">
+            <div class="insight-label">CurioSphere Insight</div>
+            <p>Curiosity is the beginning of discovery. Keep asking questions, examine the evidence, and explore the ideas that shape our world.</p>
+          </section>
+          <div class="article-end">
+            <h3>References &amp; further reading</h3>
+            <p>Explore the original sources and reliable references linked within this article to learn more.</p>
+            
+            <div class="tag-list" aria-label="Article tags"><span class="tag">India</span><span class="tag">culture</span><span class="tag">heritage</span><span class="tag">traditions</span><span class="tag">handloom</span><span class="tag">crafts</span><span class="tag">languages</span><span class="tag">festivals</span></div>
+          </div>
+        </article>
+        <nav class="toc" aria-label="Table of contents"><details open><summary>In this article</summary><ol><li><a href="#culture-is-not-only-a-monument">Culture is not only a monument</a></li><li><a href="#six-everyday-places-where-heritage-lives">Six everyday places where heritage lives</a></li><li class="toc-sub"><a href="#1-languages-and-stories">1. Languages and stories</a></li><li class="toc-sub"><a href="#2-food-and-the-knowledge-of-place">2. Food and the knowledge of place</a></li><li class="toc-sub"><a href="#3-handloom-textiles-and-crafts">3. Handloom, textiles and crafts</a></li><li class="toc-sub"><a href="#4-music-dance-and-folk-performance">4. Music, dance and folk performance</a></li><li class="toc-sub"><a href="#5-festivals-and-community-rituals">5. Festivals and community rituals</a></li><li class="toc-sub"><a href="#6-architecture-neighbourhoods-and-local-memory">6. Architecture, neighbourhoods and local memory</a></li><li><a href="#why-living-heritage-can-become-fragile">Why living heritage can become fragile</a></li><li><a href="#can-digital-technology-help-preserve-culture">Can digital technology help preserve culture?</a></li><li><a href="#five-practical-ways-to-help-keep-traditions-alive">Five practical ways to help keep traditions alive</a></li><li class="toc-sub"><a href="#ask-listen-and-record-respectfully">Ask, listen and record respectfully</a></li><li class="toc-sub"><a href="#learn-from-practitioners">Learn from practitioners</a></li><li class="toc-sub"><a href="#support-skilled-makers-fairly">Support skilled makers fairly</a></li><li class="toc-sub"><a href="#share-context-not-just-pictures">Share context, not just pictures</a></li><li class="toc-sub"><a href="#make-culture-part-of-ordinary-life">Make culture part of ordinary life</a></li><li><a href="#a-note-on-respect-and-cultural-ownership">A note on respect and cultural ownership</a></li><li><a href="#the-future-of-indian-heritage-is-being-made-today">The future of Indian heritage is being made today</a></li><li><a href="#further-reading">Further reading</a></li></ol></details></nav>
+      </div>
+
+      <div class="article-bottom">
+        <div>
+          <strong>Enjoyed exploring this story?</strong>
+          <p>Discover more ideas and perspectives with CurioSphere.</p>
+        </div>
+        <a class="bottom-link" href="../index.html">Back to CurioSphere →</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <strong>CurioSphere</strong> · Explore Beyond the Ordinary<br>
+      Thoughtful stories for curious minds.
+    </footer>
+  </div>
+</body>
+</html>

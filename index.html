@@ -61,7 +61,7 @@ img {
 }
 
 .container {
-  width: min(1200px, 92%);
+  width: min(1350px, 94%);
   margin: auto;
 }
 
@@ -431,8 +431,8 @@ section {
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 17px;
+  grid-template-columns: repeat(3,minmax(0, 1fr));
+  gap: 20px;
 }
 
 .category {
@@ -633,8 +633,8 @@ section {
 
 .articles {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 23px;
+  grid-template-columns: repeat(3,minmax(0, 1fr));
+  gap: 26px;
 }
 
 .article-card {

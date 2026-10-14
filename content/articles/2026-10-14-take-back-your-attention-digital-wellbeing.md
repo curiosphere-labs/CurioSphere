@@ -5,7 +5,7 @@ category: "Digital Lifestyle"
 subcategory: "Digital Wellbeing"
 author: "CurioSphere Editorial"
 date: "2026-10-14"
-status: "Draft"
+status: "Published"
 featured: "false"
 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85"
 tags: [digital lifestyle, digital wellbeing, smartphones, privacy, focus, screen time, cybersecurity]

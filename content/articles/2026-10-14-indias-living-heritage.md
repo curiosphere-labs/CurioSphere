@@ -7,7 +7,7 @@ author: "CurioSphere Editorial"
 date: "2026-10-14"
 status: "Published"
 featured: "false"
-image: "https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&fit=crop&w=1600&q=85"
+image: "../../assets/images/india-living-heritage/indian-handloom.jpeg"
 tags: [India, culture, heritage, traditions, handloom, crafts, languages, festivals]
 ---
 
@@ -17,7 +17,7 @@ India’s cultural heritage is often pictured through grand monuments, ancient t
 
 This is **living heritage**: knowledge, skills, expressions and practices that communities recognise as part of their identity and continue to pass on. It is not frozen in the past. It survives because people practise it, adapt it and teach it to others.
 
-![Colourful Indian traditional textiles and craftwork](https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&fit=crop&w=1600&q=85)
+![Traditional Indian handloom weaving](../../assets/images/india-living-heritage/indian-handloom.jpeg)
 
 ## Culture is not only a monument
 
@@ -71,7 +71,7 @@ Heritage also lives in old marketplaces, village ponds, traditional houses, hist
 
 A neighbourhood walk can become a small research project: photograph details where permitted, note the names of places, ask residents about changes over time, and compare memories with reliable historical records. Be considerate of residents’ privacy and remember that a living neighbourhood is a home, not merely a backdrop.
 
-![Traditional architecture and a historic place in India](https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=85)
+![Indian classical dance performance](../../assets/images/india-living-heritage/indian-classical-dance.jpeg)
 
 ## Why living heritage can become fragile
 

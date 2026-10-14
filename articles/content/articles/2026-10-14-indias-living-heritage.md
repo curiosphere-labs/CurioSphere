@@ -5,7 +5,7 @@ category: "India & Culture"
 subcategory: "Living Heritage"
 author: "CurioSphere Editorial"
 date: "2026-10-14"
-status: "Draft"
+status: "Published"
 featured: "false"
 image: "https://images.unsplash.com/photo-1606293926075-69a00db8233a?auto=format&fit=crop&w=1600&q=85"
 tags: [India, culture, heritage, traditions, handloom, crafts, languages, festivals]

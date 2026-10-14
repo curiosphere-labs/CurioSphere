@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="You do not need to abandon your phone to use it better. Learn practical ways to reduce digital clutter, protect privacy, focus more deeply and make technology serve your goals.">
+  <meta name="author" content="CurioSphere Editorial">
+  <meta name="theme-color" content="#10142b">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Take Back Your Attention: A Practical Guide to a Healthier Digital Life">
+  <meta property="og:description" content="You do not need to abandon your phone to use it better. Learn practical ways to reduce digital clutter, protect privacy, focus more deeply and make technology serve your goals.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
+  <title>Take Back Your Attention: A Practical Guide to a Healthier Digital Life | CurioSphere</title>
+  <style>
+    :root {
+      --ink: #19213b;
+      --muted: #68718a;
+      --navy: #10142b;
+      --purple: #7565e8;
+      --teal: #36c6b3;
+      --paper: #ffffff;
+      --canvas: #f5f6fb;
+      --line: #e6e8f1;
+      --soft-purple: #f0eeff;
+      --soft-teal: #e9fbf7;
+      --shadow: 0 20px 60px rgba(22, 28, 60, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+                   BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #5748c9; text-underline-offset: 3px; }
+    a:hover { color: #34279e; }
+    .site-header {
+      background: rgba(16, 20, 43, .98);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 17px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.22rem;
+      font-weight: 850;
+      letter-spacing: -.04em;
+    }
+    .brand span { color: var(--teal); }
+    .header-tagline { color: #c5c9dd; font-size: .82rem; }
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 650;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      padding: 8px 14px;
+      white-space: nowrap;
+    }
+    .back-link:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .page-wrap { max-width: 1180px; margin: 0 auto; padding: 30px 24px 64px; }
+    .breadcrumbs {
+      color: var(--muted);
+      font-size: .85rem;
+      margin: 0 0 22px;
+    }
+    .breadcrumbs a { color: var(--muted); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple); }
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .article-top { max-width: 900px; margin: auto; padding: 48px 58px 30px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #5546c2;
+      background: var(--soft-purple);
+      border: 1px solid #e4e0ff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5.2vw, 4.15rem);
+      letter-spacing: -.045em;
+      line-height: 1.09;
+      margin: 22px 0 20px;
+      color: var(--navy);
+      text-wrap: balance;
+    }
+    .dek {
+      color: #59627a;
+      font-size: clamp(1.06rem, 2vw, 1.24rem);
+      line-height: 1.65;
+      margin: 0 0 25px;
+    }
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px 14px;
+      color: var(--muted);
+      font-size: .88rem;
+      border-top: 1px solid var(--line);
+      padding-top: 19px;
+    }
+    .byline strong { color: var(--ink); }
+    .dot { color: #b0b5c5; }
+    .hero-figure { margin: 0; background: #eceefa; }
+    .hero-image {
+      display: block;
+      width: 100%;
+      max-height: 590px;
+      object-fit: cover;
+    }
+    .hero-figure figcaption {
+      max-width: 900px;
+      margin: auto;
+      padding: 10px 24px 14px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      gap: 46px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 42px 34px 56px;
+    }
+    .article-body { min-width: 0; font-size: 1.075rem; line-height: 1.9; }
+    .article-body > p:first-child {
+      font-size: 1.18rem;
+      color: #39425c;
+    }
+    .article-body h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      margin: 2.15em 0 .65em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body h3 {
+      font-size: 1.28rem;
+      line-height: 1.35;
+      margin: 1.8em 0 .5em;
+      color: var(--navy);
+      scroll-margin-top: 24px;
+    }
+    .article-body p { margin: 0 0 1.25em; }
+    .article-body ul, .article-body ol { padding-left: 1.45em; margin: 0 0 1.4em; }
+    .article-body li { padding-left: .25em; margin: .35em 0; }
+    .article-body strong { color: #22294a; }
+    .article-body blockquote {
+      margin: 1.8em 0;
+      padding: 22px 25px;
+      background: var(--soft-teal);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 14px 14px 0;
+      color: #254b50;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      line-height: 1.65;
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 2.5em 0; }
+    .article-body code {
+      background: #f0f1f8;
+      padding: .15em .4em;
+      border-radius: 5px;
+      font-size: .88em;
+    }
+    .article-body .inline-figure {
+      margin: 1.5em 0;
+    }
+    .inline-figure img {
+      display: block; max-width: 100%; height: auto; border-radius: 14px;
+    }
+    .inline-figure figcaption { color: var(--muted); font-size: .82rem; }
+    .toc {
+      align-self: start;
+      position: sticky;
+      top: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fbfbff;
+      padding: 18px 18px 12px;
+      font-size: .86rem;
+    }
+    .toc summary {
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .toc ol { padding-left: 1.2em; margin: 8px 0; }
+    .toc li { margin: 7px 0; line-height: 1.45; }
+    .toc a { color: #626b83; text-decoration: none; }
+    .toc a:hover { color: var(--purple); }
+    .toc .toc-sub { margin-left: 8px; font-size: .82rem; }
+    .insight {
+      margin: 2.2em 0;
+      padding: 23px 25px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f0eeff, #eefbf8);
+      border: 1px solid #e3e3f7;
+    }
+    .insight-label {
+      color: #5546c2;
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .insight p { margin: 0; }
+    .article-end {
+      border-top: 1px solid var(--line);
+      margin-top: 38px;
+      padding-top: 24px;
+    }
+    .source-button {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+      margin: 4px 0 15px;
+    }
+    .source-button:hover { background: #292e55; color: #fff; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: #fafaff;
+      color: #626b83;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .78rem;
+    }
+    .article-bottom {
+      border-top: 1px solid var(--line);
+      background: #fafaff;
+      padding: 24px 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .article-bottom strong { color: var(--navy); }
+    .article-bottom p { margin: 3px 0 0; color: var(--muted); font-size: .9rem; }
+    .bottom-link {
+      display: inline-block; text-decoration: none; white-space: nowrap;
+      border-radius: 999px; padding: 10px 15px; background: var(--soft-purple);
+      color: #5142bd; font-size: .88rem; font-weight: 750;
+    }
+    .site-footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 25px 20px 10px;
+    }
+    .site-footer strong { color: var(--navy); }
+    @media (max-width: 850px) {
+      .article-layout { grid-template-columns: 1fr; gap: 24px; padding: 30px 28px 42px; }
+      .toc { position: static; grid-row: 1; }
+      .article-top { padding: 38px 32px 25px; }
+      .article-bottom { padding: 22px 32px; }
+    }
+    @media (max-width: 560px) {
+      .header-inner { padding: 14px 17px; }
+      .header-tagline { display: none; }
+      .page-wrap { padding: 18px 12px 38px; }
+      .article-card { border-radius: 17px; }
+      .article-top { padding: 28px 22px 22px; }
+      h1 { font-size: clamp(2.05rem, 10vw, 3rem); }
+      .dek { font-size: 1rem; }
+      .article-layout { padding: 23px 21px 32px; }
+      .article-body { font-size: 1rem; line-height: 1.8; }
+      .article-bottom { align-items: flex-start; flex-direction: column; padding: 22px; }
+      .byline { gap: 6px 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .site-header, .breadcrumbs, .toc, .article-bottom, .site-footer { display: none; }
+      .page-wrap { padding: 0; }
+      .article-card { box-shadow: none; border: 0; }
+      .article-layout { display: block; padding: 20px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">Curio<span>Sphere</span></a>
+      <span class="header-tagline">Explore Beyond the Ordinary</span>
+      <a class="back-link" href="../index.html">← Explore stories</a>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> &nbsp;›&nbsp;
+      <span>Digital Lifestyle</span>
+       &nbsp;›&nbsp; <span>Digital Wellbeing</span>
+    </nav>
+
+    <main class="article-card">
+      <section class="article-top">
+        <div class="eyebrow">Digital Lifestyle</div>
+        <h1>Take Back Your Attention: A Practical Guide to a Healthier Digital Life</h1>
+        <p class="dek">You do not need to abandon your phone to use it better. Learn practical ways to reduce digital clutter, protect privacy, focus more deeply and make technology serve your goals.</p>
+        <div class="byline">
+          <span>By <strong>CurioSphere Editorial</strong></span>
+          <span class="dot">•</span>
+          <time datetime="2026-10-14">2026-10-14</time>
+          <span class="dot">•</span>
+          <span>9 min read</span>
+        </div>
+      </section>
+
+      <figure class="hero-figure"><img class="hero-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Take Back Your Attention: A Practical Guide to a Healthier Digital Life" fetchpriority="high"></figure>
+
+      <div class="article-layout">
+        <article class="article-body">
+          <p>A smartphone can be a map, library, camera, bank, classroom and connection to people we care about. It can also interrupt a conversation, delay sleep, scatter our attention and quietly fill spare moments with scrolling.</p>
+<p>The problem is not simply that screens exist. Digital tools are useful, and many people depend on them for work, learning, accessibility and family responsibilities. The more helpful question is: <strong>Are our digital habits helping us do what matters, or are we using devices automatically without deciding what we want from them?</strong></p>
+<p>Digital wellbeing means creating a healthier relationship with technology—one that supports our goals, relationships, safety and daily routines. It does not require deleting every app or measuring success by a perfect screen-time number. It begins with noticing patterns and making small, realistic changes.</p>
+<p><figure class="inline-figure"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;amp;fit=crop&amp;amp;w=1600&amp;amp;q=85" alt="Person using a laptop and smartphone in a modern workspace" loading="lazy"><figcaption>Person using a laptop and smartphone in a modern workspace</figcaption></figure></p>
+<h2 id="1-look-beyond-the-total-screen-time-number">1. Look beyond the total screen-time number</h2>
+<p>Screen-time reports can be useful, but the total alone does not explain whether device use is beneficial. A video call with family, a work meeting, an online lesson and an hour of unplanned scrolling are all screen time, yet they serve different purposes.</p>
+<p>Instead of judging yourself by one number, look for patterns:</p>
+<ul>
+<li>Which apps take more time than you intended?</li>
+<li>Do you pick up your phone because you have a specific task, or because there is a pause in your day?</li>
+<li>Which notifications genuinely need an immediate response?</li>
+<li>Does late-night use make it harder to follow the sleep routine you want?</li>
+<li>Which digital activities leave you informed, connected or capable—and which leave you distracted?</li>
+</ul>
+<p>For a week, observe your normal use without trying to change everything at once. Then choose one habit that would make the biggest positive difference. A small, specific goal is easier to maintain than a vague promise to “use the phone less.”</p>
+<h2 id="2-make-distraction-less-automatic">2. Make distraction less automatic</h2>
+<p>Many apps are designed to make new content easy to reach. You do not have to rely on willpower every time an alert appears. You can change the environment around the habit.</p>
+<h3 id="try-these-practical-adjustments">Try these practical adjustments</h3>
+<p><strong>Turn off non-essential notifications.</strong> Keep alerts for the people and services that truly need to reach you. Disable promotional alerts, routine likes and other interruptions that can wait.</p>
+<p><strong>Move distracting apps off the home screen.</strong> You can still use them, but opening them becomes a deliberate choice rather than a reflex.</p>
+<p><strong>Use focus settings.</strong> Set a work, study or reading mode that allows only selected contacts and apps. Start with a manageable block, such as 25 or 30 minutes.</p>
+<p><strong>Keep the phone out of reach during focused work.</strong> If you do not need it for the task, place it in a bag, drawer or another room. Even a small amount of friction can interrupt an automatic checking habit.</p>
+<p><strong>Choose a stopping point before opening an app.</strong> Decide whether you are checking one message, watching one tutorial or researching a specific question. When that task is complete, pause before continuing.</p>
+<p>These strategies are not about treating technology as an enemy. They are ways to make your devices follow your intentions rather than constantly competing for your attention.</p>
+<h2 id="3-design-a-better-start-and-end-to-the-day">3. Design a better start and end to the day</h2>
+<p>The first and last parts of the day can be especially vulnerable to unplanned phone use. A quick check may become a long scroll, and messages or headlines can set the tone before you have decided what deserves your attention.</p>
+<p>You could experiment with two simple boundaries:</p>
+<ul>
+<li><strong>A phone-light start:</strong> Spend the first 10–15 minutes after waking up on a personal routine—washing, stretching, breakfast or planning—before opening social media.</li>
+<li><strong>A calmer evening:</strong> Choose a time to stop non-essential browsing before bed. If practical, charge your phone away from the bed and use a separate alarm clock.</li>
+</ul>
+<p>Treat these as experiments, not universal medical rules. Work schedules, caregiving, emergencies and accessibility needs differ. If you need your phone overnight, you might instead enable Do Not Disturb while allowing calls from selected contacts.</p>
+<p>The goal is to protect the routines that help you feel rested and prepared, not to follow an arbitrary rule.</p>
+<h2 id="4-replace-passive-scrolling-with-purposeful-use">4. Replace passive scrolling with purposeful use</h2>
+<p>Removing a habit leaves an empty space. It can help to decide what you would like to do with that time instead.</p>
+<p>| If you often… | Try replacing one session with… | |---|---| | Scroll when you are bored | Take a short walk, stretch or do a small hands-on activity | | Watch videos without a goal | Save one useful tutorial and practise what it teaches | | Open several apps while working | Keep a short task list and use one app at a time | | Check social media during every pause | Let one pause remain quiet, or speak with someone nearby | | Save articles but never read them | Choose one saved article and finish it before saving more | | Take many photos without enjoying the moment | Take a few intentional photos, then put the phone away |</p>
+<p>You do not need to eliminate entertainment. Relaxation and humour are valid uses of technology. The distinction is between choosing entertainment and discovering that an hour has passed without meaning to spend it that way.</p>
+<h2 id="5-protect-your-privacy-while-you-simplify-your-digital-life">5. Protect your privacy while you simplify your digital life</h2>
+<p>A healthier digital routine should also be a safer one. Apps and websites may request access to your location, contacts, microphone, camera, photos or other information. Some access is necessary for a feature; some may not be.</p>
+<p>A monthly privacy check can help:</p>
+<ol>
+<li><strong>Review app permissions.</strong> Ask whether each app needs the access it has. Remove permissions that are not necessary for its core function.</li>
+<li><strong>Delete apps you no longer use.</strong> Fewer unused apps can mean fewer accounts and permissions to manage.</li>
+<li><strong>Use unique passwords.</strong> Avoid reusing the same password across important accounts. A reputable password manager can help.</li>
+<li><strong>Enable multi-factor authentication.</strong> Use it on email, financial services and other important accounts wherever available.</li>
+<li><strong>Install updates.</strong> Keep your operating system, browser and apps updated through official channels.</li>
+<li><strong>Be cautious with links and urgent messages.</strong> Do not share one-time passwords, PINs or recovery codes in response to unexpected calls or messages. Verify requests through a separate, trusted channel.</li>
+<li><strong>Check before sharing.</strong> Photos and posts can reveal locations, routines, documents or information about other people. Review the audience and remove details that do not need to be public.</li>
+</ol>
+<p>Privacy settings and menus differ by device and app, so use the official support information for your particular phone or service. Do not install a “security” app from an unexpected link or grant broad access just because a pop-up says it is urgent.</p>
+<h2 id="6-make-your-digital-space-less-cluttered">6. Make your digital space less cluttered</h2>
+<p>Digital clutter can make useful information harder to find. You do not need a perfect filing system; you need one you can maintain.</p>
+<p>Try a 15-minute reset:</p>
+<ul>
+<li>Unsubscribe from newsletters you consistently ignore.</li>
+<li>Archive or delete emails that no longer need action.</li>
+<li>Remove duplicate screenshots and downloads after checking they are not important.</li>
+<li>Turn off notifications from apps you rarely open.</li>
+<li>Put essential documents in a clearly named folder.</li>
+<li>Review cloud-sharing links and remove access that is no longer needed.</li>
+<li>Back up important photos and files to a trusted location.</li>
+</ul>
+<p>Be careful when deleting files or accounts. Confirm that important records are backed up, and understand what will be permanently removed before proceeding.</p>
+<h2 id="7-set-family-and-work-boundaries-that-are-realistic">7. Set family and work boundaries that are realistic</h2>
+<p>Digital habits are shaped by the people and expectations around us. A person may want to stop checking messages after work but feel unable to do so if colleagues expect immediate replies. A family may want device-free meals but need to agree on what happens when an urgent call arrives.</p>
+<p>Instead of making a rule that nobody can follow, agree on a few clear expectations:</p>
+<ul>
+<li>During a meal or conversation, keep phones away unless someone is waiting for an important call.</li>
+<li>For work, define which messages are urgent and which can wait until working hours.</li>
+<li>For children, combine age-appropriate limits with conversations about privacy, online kindness, advertising and misinformation.</li>
+<li>For family members who rely on devices for accessibility, learning or safety, adapt the boundaries to their needs.</li>
+<li>Review the arrangement after a week and change what is not working.</li>
+</ul>
+<p>The aim is not to shame anyone for using a device. It is to create shared expectations that make room for attention, rest and real-world connection.</p>
+<h2 id="8-learn-to-recognise-misleading-content">8. Learn to recognise misleading content</h2>
+<p>A digital life is healthier when it includes information literacy. Posts can be misleading even when they look professional, have many likes or are shared by someone you know.</p>
+<p>Before sharing a surprising claim:</p>
+<ol>
+<li>Find the original source, not just a screenshot or forwarded message.</li>
+<li>Check the date and context.</li>
+<li>Look for independent reporting or a relevant official source.</li>
+<li>Separate what the source demonstrates from what the headline claims.</li>
+<li>Be especially cautious with medical, financial, emergency and political claims.</li>
+<li>If an image or video seems extraordinary, look for reliable verification before treating it as genuine.</li>
+</ol>
+<p>Generative AI makes it easier to create convincing text, images, audio and video. That does not mean every unusual post is fake; it means confidence and appearance alone are not enough to establish authenticity.</p>
+<h2 id="9-build-a-seven-day-digital-reset">9. Build a seven-day digital reset</h2>
+<p>You can try the following plan without buying a new device or subscribing to an app.</p>
+<p><strong>Day 1 — Observe.</strong> Review your screen-time report and identify one pattern you would like to change.</p>
+<p><strong>Day 2 — Reduce interruptions.</strong> Disable three non-essential notifications.</p>
+<p><strong>Day 3 — Create a focus space.</strong> Move one distracting app off the home screen and try one 25-minute focused session.</p>
+<p><strong>Day 4 — Protect an offline moment.</strong> Choose one meal, walk or conversation to enjoy without unnecessary phone checking.</p>
+<p><strong>Day 5 — Review privacy.</strong> Check permissions for a few apps and enable multi-factor authentication on one important account if available.</p>
+<p><strong>Day 6 — Clear digital clutter.</strong> Spend 15 minutes unsubscribing, organising or deleting items you no longer need.</p>
+<p><strong>Day 7 — Review and keep what works.</strong> Ask which change felt useful, which was unrealistic and what you want to continue next week.</p>
+<p>This is not a clinical programme or a test of discipline. It is a practical experiment. Keep the changes that improve your daily life and adjust the rest.</p>
+<h2 id="10-what-if-you-still-struggle-to-change-your-habits">10. What if you still struggle to change your habits?</h2>
+<p>Habit change is not always easy, especially when devices are part of work, study, social life or caregiving. If a particular app repeatedly takes more time than intended, use a combination of barriers: remove it from the home screen, log out after use, set an app limit, or ask a friend to join you in a shared focus period.</p>
+<p>If phone use is seriously disrupting sleep, work, studies, relationships or daily functioning and you feel unable to manage it, consider speaking with a qualified health professional. Avoid assuming that every frequent user has an addiction; the impact on a person’s life matters more than a label.</p>
+<h2 id="the-goal-is-not-less-technology-at-any-cost">The goal is not less technology at any cost</h2>
+<p>A well-used phone can help us learn, create, work, navigate, communicate and stay safe. A poorly managed digital routine can make it harder to focus on those same priorities.</p>
+<p>The solution is not necessarily to disconnect from modern life. It is to become more deliberate about how we connect. Turn down the noise that does not matter, protect your information, make room for offline experiences and choose digital tools that support the life you want to live.</p>
+<p><strong>A healthier digital life begins with one small decision: before you open an app, know why you are opening it—and give yourself permission to stop when that purpose is complete.</strong></p>
+<hr>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://digitalwellnesslab.org/articles/" target="_blank" rel="noopener noreferrer">Digital Wellness Lab — Articles and resources</a></li>
+<li><a href="https://doi.org/10.1098/rsos.250969" target="_blank" rel="noopener noreferrer">Royal Society Open Science — Towards digital balance: a data-driven scoping review</a></li>
+<li><a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal, India</a></li>
+</ul>
+<p><em>Editorial note: This article offers general digital-wellbeing and online-safety suggestions, not medical, legal or device-specific advice. Review the official documentation for your device and services before changing security settings.</em></p>
+          <section class="insight" aria-label="CurioSphere Insight">
+            <div class="insight-label">CurioSphere Insight</div>
+            <p>Curiosity is the beginning of discovery. Keep asking questions, examine the evidence, and explore the ideas that shape our world.</p>
+          </section>
+          <div class="article-end">
+            <h3>References &amp; further reading</h3>
+            <p>Explore the original sources and reliable references linked within this article to learn more.</p>
+            
+            <div class="tag-list" aria-label="Article tags"><span class="tag">digital lifestyle</span><span class="tag">digital wellbeing</span><span class="tag">smartphones</span><span class="tag">privacy</span><span class="tag">focus</span><span class="tag">screen time</span><span class="tag">cybersecurity</span></div>
+          </div>
+        </article>
+        <nav class="toc" aria-label="Table of contents"><details open><summary>In this article</summary><ol><li><a href="#1-look-beyond-the-total-screen-time-number">1. Look beyond the total screen-time number</a></li><li><a href="#2-make-distraction-less-automatic">2. Make distraction less automatic</a></li><li class="toc-sub"><a href="#try-these-practical-adjustments">Try these practical adjustments</a></li><li><a href="#3-design-a-better-start-and-end-to-the-day">3. Design a better start and end to the day</a></li><li><a href="#4-replace-passive-scrolling-with-purposeful-use">4. Replace passive scrolling with purposeful use</a></li><li><a href="#5-protect-your-privacy-while-you-simplify-your-digital-life">5. Protect your privacy while you simplify your digital life</a></li><li><a href="#6-make-your-digital-space-less-cluttered">6. Make your digital space less cluttered</a></li><li><a href="#7-set-family-and-work-boundaries-that-are-realistic">7. Set family and work boundaries that are realistic</a></li><li><a href="#8-learn-to-recognise-misleading-content">8. Learn to recognise misleading content</a></li><li><a href="#9-build-a-seven-day-digital-reset">9. Build a seven-day digital reset</a></li><li><a href="#10-what-if-you-still-struggle-to-change-your-habits">10. What if you still struggle to change your habits?</a></li><li><a href="#the-goal-is-not-less-technology-at-any-cost">The goal is not less technology at any cost</a></li><li><a href="#further-reading">Further reading</a></li></ol></details></nav>
+      </div>
+
+      <div class="article-bottom">
+        <div>
+          <strong>Enjoyed exploring this story?</strong>
+          <p>Discover more ideas and perspectives with CurioSphere.</p>
+        </div>
+        <a class="bottom-link" href="../index.html">Back to CurioSphere →</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <strong>CurioSphere</strong> · Explore Beyond the Ordinary<br>
+      Thoughtful stories for curious minds.
+    </footer>
+  </div>
+</body>
+</html>

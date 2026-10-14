@@ -58,5 +58,25 @@
       "festivals"
     ],
     "url": "articles/2026-10-14-indias-living-heritage.html"
+  },
+  {
+    "title": "Take Back Your Attention: A Practical Guide to a Healthier Digital Life",
+    "description": "You do not need to abandon your phone to use it better. Learn practical ways to reduce digital clutter, protect privacy, focus more deeply and make technology serve your goals.",
+    "category": "Digital Lifestyle",
+    "subcategory": "Digital Wellbeing",
+    "author": "CurioSphere Editorial",
+    "date": "2026-10-14",
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
+    "tags": [
+      "digital lifestyle",
+      "digital wellbeing",
+      "smartphones",
+      "privacy",
+      "focus",
+      "screen time",
+      "cybersecurity"
+    ],
+    "url": "articles/2026-10-14-take-back-your-attention-digital-wellbeing.html"
   }
 ]

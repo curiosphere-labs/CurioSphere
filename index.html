@@ -1148,14 +1148,15 @@ footer h3 {
   <div class="search-section">
     <div class="container search-row">
 
-      <form class="search-box" id="searchForm" role="search">
+      <form class="search-box" id="searchForm" role="search" action="https://www.google.com/search" method="get" target="_blank">
         <span aria-hidden="true">⌕</span>
 
         <input
           type="search"
           id="searchInput"
-          placeholder="Search published stories..."
-          aria-label="Search published stories">
+          name="q"
+          placeholder="Search Google..."
+          aria-label="Search Google">
 
         <button type="submit">Search</button>
       </form>
@@ -2189,23 +2190,7 @@ document.querySelectorAll("[data-filter-category]").forEach(widget => {
   });
 });
 
-/* Search published CurioSphere articles locally */
-if (searchForm && searchInput) {
-  searchForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    activeQuery = searchInput.value.trim();
-    activeCategory = "";
-    renderArticles();
-    document.getElementById("latest").scrollIntoView({ behavior: "smooth" });
-  });
-
-  searchInput.addEventListener("input", function () {
-    if (!searchInput.value.trim() && activeQuery) {
-      activeQuery = "";
-      renderArticles();
-    }
-  });
-}
+/* The search form submits directly to Google in a new tab. */
 
 /* Clear filters */
 

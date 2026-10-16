@@ -61,7 +61,7 @@ img {
 }
 
 .container {
-  width: min(1350px, 94%);
+  width: min(1200px, 92%);
   margin: auto;
 }
 
@@ -115,6 +115,38 @@ header {
   border-radius: 10px;
   font-weight: 800;
 }
+
+
+/* CURIO: ORIGINAL INLINE MASCOT MARK */
+.brand-lockup{display:inline-flex;align-items:center;gap:10px;}
+.mascot-mark{width:42px;height:42px;flex:0 0 42px;filter:drop-shadow(0 0 10px rgba(101,224,207,.18));}
+.brand-wordmark{display:inline-block;}
+.quote-of-day{padding:18px 0 0;background:var(--bg);}
+.quote-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:18px 24px;border:1px solid rgba(155,140,255,.28);border-radius:18px;background:linear-gradient(105deg,rgba(155,140,255,.13),rgba(101,224,207,.07));}
+.quote-mascot{width:58px;height:58px;display:grid;place-items:center;border-radius:16px;background:rgba(11,16,32,.45);}
+.quote-mascot .mascot-mark{width:48px;height:48px;}
+.quote-kicker{color:var(--accent);font-size:10px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;}
+.quote-text{margin:4px 0 2px;font-size:clamp(15px,2vw,20px);font-weight:750;line-height:1.45;}
+.quote-source{color:var(--muted);font-size:12px;}
+.quote-day{color:var(--muted);font-size:11px;white-space:nowrap;}
+.mascot-hero{width:min(220px,70%);height:auto;filter:drop-shadow(0 15px 25px rgba(0,0,0,.35));}
+.feature-band{padding:30px 0;}
+.feature-band-card{display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:25px;overflow:hidden;border:1px solid var(--border);border-radius:22px;background:linear-gradient(105deg,#f3d7aa,#f7e9d1 58%,#e9c59b);color:#182033;}
+.feature-band-art{height:180px;display:grid;place-items:center;background:linear-gradient(145deg,#e7b777,#f6dfb9);font-size:78px;}
+.feature-band-copy{padding:22px 0;}
+.feature-band-copy .kicker{color:#8c3c2a;margin-bottom:6px;}
+.feature-band-copy h2{margin:0 0 7px;font-size:clamp(22px,3vw,30px);line-height:1.2;}
+.feature-band-copy p{margin:0;color:#3e4554;font-size:13px;}
+.feature-band-copy .episode-line{margin-top:10px;font-weight:800;font-size:13px;color:#273248;}
+.feature-band-action{padding:22px;}
+.picks-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.pick-card{display:flex;flex-direction:column;min-width:0;padding:18px;border:1px solid var(--border);border-radius:17px;background:var(--surface);}
+.pick-icon{font-size:30px;}
+.pick-card h3{margin:10px 0 6px;font-size:15px;line-height:1.35;}
+.pick-card p{margin:0;color:var(--muted);font-size:12px;}
+.pick-note{margin-top:18px;color:var(--muted);font-size:11px;}
+@media(max-width:850px){.feature-band-card{grid-template-columns:125px 1fr;}.feature-band-art{height:100%;min-height:160px;font-size:60px}.feature-band-action{grid-column:1/-1;padding:0 20px 20px}.picks-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.quote-card{grid-template-columns:auto 1fr;gap:12px;padding:14px}.quote-day{grid-column:2}.quote-mascot{width:46px;height:46px}.quote-mascot .mascot-mark{width:40px;height:40px}.feature-band-card{grid-template-columns:1fr}.feature-band-art{height:110px;min-height:110px}.feature-band-copy{padding:18px 20px 10px}.feature-band-action{padding:0 20px 20px}.picks-grid{grid-template-columns:1fr 1fr}}
 
 /* HERO */
 
@@ -308,8 +340,12 @@ h1 {
 .orbit-center {
   position: relative;
   z-index: 1;
-  font-size: 48px;
+  width: 112px;
+  height: 112px;
+  display: grid;
+  place-items: center;
 }
+.orbit-center .mascot-mark { width: 112px; height: 112px; }
 
 .orbit-dot {
   position: absolute;
@@ -431,8 +467,8 @@ section {
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(3,minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
 }
 
 .category {
@@ -633,8 +669,8 @@ section {
 
 .articles {
   display: grid;
-  grid-template-columns: repeat(3,minmax(0, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 23px;
 }
 
 .article-card {
@@ -1001,15 +1037,18 @@ footer h3 {
 <header>
   <div class="container nav">
 
-    <a href="./" class="brand">
-      Curio<span>Sphere</span>
+    <a href="./" class="brand brand-lockup" aria-label="CurioSphere home">
+      <svg class="mascot-mark" viewBox="0 0 100 100" role="img" aria-label="Curio the CurioSphere owl" xmlns="http://www.w3.org/2000/svg"><path d="M18 38 12 12 36 25Q50 17 64 25L88 12 82 39Q91 53 84 73 75 92 50 94 25 92 16 73 9 54 18 38Z" fill="#24375b" stroke="#65e0cf" stroke-width="2.5"/><path d="M22 39 29 27 43 36 39 49 24 51Z" fill="#516b9b"/><path d="M78 39 71 27 57 36 61 49 76 51Z" fill="#516b9b"/><ellipse cx="35" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="65" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="36" cy="53" rx="9" ry="12" fill="#10182b"/><ellipse cx="64" cy="53" rx="9" ry="12" fill="#10182b"/><circle cx="39" cy="48" r="3.5" fill="#fff7df"/><circle cx="67" cy="48" r="3.5" fill="#fff7df"/><path d="M45 67 55 67 50 76Z" fill="#ffad4a"/><path d="M34 80Q50 86 66 80" fill="none" stroke="#9b8cff" stroke-width="3" stroke-linecap="round"/><path d="M50 21 53 28 61 29 55 34 57 42 50 37 43 42 45 34 39 29 47 28Z" fill="#65e0cf" stroke="#b8fff5" stroke-width="1.5"/></svg>
+      <span class="brand-wordmark">Curio<span>Sphere</span></span>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#categories">Explore</a>
       <a href="#featured">Featured</a>
+      <a href="#daily-stories">Daily stories</a>
+      <a href="#categories">Categories</a>
       <a href="#latest">Latest stories</a>
-      <a href="#about">About</a>
+      <a href="#curiosphere-picks">Picks</a>
 
       <a
         class="nav-button"
@@ -1026,6 +1065,21 @@ footer h3 {
 <main>
 
   <!-- HERO -->
+
+  <!-- QUOTE OF THE DAY: original CurioSphere lines, rotating by date -->
+  <section class="quote-of-day" aria-label="Quote of the day" style="padding-bottom:0">
+    <div class="container">
+      <div class="quote-card">
+        <div class="quote-mascot"><svg class="mascot-mark" viewBox="0 0 100 100" role="img" aria-label="Curio the CurioSphere owl" xmlns="http://www.w3.org/2000/svg"><path d="M18 38 12 12 36 25Q50 17 64 25L88 12 82 39Q91 53 84 73 75 92 50 94 25 92 16 73 9 54 18 38Z" fill="#24375b" stroke="#65e0cf" stroke-width="2.5"/><path d="M22 39 29 27 43 36 39 49 24 51Z" fill="#516b9b"/><path d="M78 39 71 27 57 36 61 49 76 51Z" fill="#516b9b"/><ellipse cx="35" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="65" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="36" cy="53" rx="9" ry="12" fill="#10182b"/><ellipse cx="64" cy="53" rx="9" ry="12" fill="#10182b"/><circle cx="39" cy="48" r="3.5" fill="#fff7df"/><circle cx="67" cy="48" r="3.5" fill="#fff7df"/><path d="M45 67 55 67 50 76Z" fill="#ffad4a"/><path d="M34 80Q50 86 66 80" fill="none" stroke="#9b8cff" stroke-width="3" stroke-linecap="round"/><path d="M50 21 53 28 61 29 55 34 57 42 50 37 43 42 45 34 39 29 47 28Z" fill="#65e0cf" stroke="#b8fff5" stroke-width="1.5"/></svg></div>
+        <div>
+          <div class="quote-kicker">A little thought from Curio</div>
+          <p class="quote-text" id="quoteText">Curiosity turns ordinary moments into extraordinary discoveries.</p>
+          <div class="quote-source" id="quoteSource">A CurioSphere original</div>
+        </div>
+        <div class="quote-day" id="quoteDay">TODAY'S THOUGHT</div>
+      </div>
+    </div>
+  </section>
 
   <section class="hero" style="padding-top:86px;padding-bottom:76px">
     <div class="container hero-grid">
@@ -1073,7 +1127,7 @@ footer h3 {
         <div class="visual-art">
           <div class="orbit">
             <div class="orbit-dot"></div>
-            <div class="orbit-center">🌌</div>
+            <div class="orbit-center"><svg class="mascot-mark" viewBox="0 0 100 100" role="img" aria-label="Curio the CurioSphere owl" xmlns="http://www.w3.org/2000/svg"><path d="M18 38 12 12 36 25Q50 17 64 25L88 12 82 39Q91 53 84 73 75 92 50 94 25 92 16 73 9 54 18 38Z" fill="#24375b" stroke="#65e0cf" stroke-width="2.5"/><path d="M22 39 29 27 43 36 39 49 24 51Z" fill="#516b9b"/><path d="M78 39 71 27 57 36 61 49 76 51Z" fill="#516b9b"/><ellipse cx="35" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="65" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="36" cy="53" rx="9" ry="12" fill="#10182b"/><ellipse cx="64" cy="53" rx="9" ry="12" fill="#10182b"/><circle cx="39" cy="48" r="3.5" fill="#fff7df"/><circle cx="67" cy="48" r="3.5" fill="#fff7df"/><path d="M45 67 55 67 50 76Z" fill="#ffad4a"/><path d="M34 80Q50 86 66 80" fill="none" stroke="#9b8cff" stroke-width="3" stroke-linecap="round"/><path d="M50 21 53 28 61 29 55 34 57 42 50 37 43 42 45 34 39 29 47 28Z" fill="#65e0cf" stroke="#b8fff5" stroke-width="1.5"/></svg></div>
           </div>
         </div>
 
@@ -1212,6 +1266,23 @@ footer h3 {
     </div>
   </section>
 
+
+  <!-- DAILY STORY SERIES: placeholder until the first episode is published -->
+  <section class="feature-band" id="daily-stories" aria-labelledby="dailyStoriesTitle">
+    <div class="container">
+      <div class="feature-band-card">
+        <div class="feature-band-art" aria-hidden="true">🇮🇳</div>
+        <div class="feature-band-copy">
+          <span class="kicker">CurioSphere original series</span>
+          <h2 id="dailyStoriesTitle">Unsung Heroes of India</h2>
+          <p>Meet the people whose courage, ideas and quiet determination helped shape our world.</p>
+          <div class="episode-line">Coming soon · Short, researched stories with one new perspective at a time.</div>
+        </div>
+        <div class="feature-band-action"><a class="button-primary" href="#latest">Explore published stories →</a></div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURED ARTICLE -->
 
   <section id="featured" style="padding-top:10px">
@@ -1248,6 +1319,23 @@ footer h3 {
 
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- CURIOSPHERE PICKS: placeholder cards; add real product links only after review -->
+  <section id="curiosphere-picks" aria-labelledby="picksTitle" style="padding-bottom:10px">
+    <div class="container">
+      <div class="section-heading">
+        <div><span class="kicker">Handpicked recommendations</span><h2 id="picksTitle">CurioSphere Picks.</h2><p>Useful finds for learners, readers and curious minds.</p></div>
+      </div>
+      <div class="picks-grid">
+        <article class="pick-card"><div class="pick-icon" aria-hidden="true">📚</div><h3>Books worth exploring</h3><p>Reading picks for building knowledge and fresh perspectives.</p></article>
+        <article class="pick-card"><div class="pick-icon" aria-hidden="true">💻</div><h3>Tools for learning</h3><p>Digital tools that can make study and research more effective.</p></article>
+        <article class="pick-card"><div class="pick-icon" aria-hidden="true">✍️</div><h3>Creative essentials</h3><p>Simple supplies for planning, writing and making ideas real.</p></article>
+        <article class="pick-card"><div class="pick-icon" aria-hidden="true">🔭</div><h3>Curiosity kits</h3><p>Activities and kits that encourage hands-on discovery.</p></article>
+      </div>
+      <p class="pick-note">Recommendations are placeholders for now. Product links and any affiliate disclosure will be added before this section is used for monetisation.</p>
     </div>
   </section>
 
@@ -1343,8 +1431,9 @@ footer h3 {
 
       <div class="footer-about">
 
-        <a href="./" class="brand">
-          Curio<span>Sphere</span>
+        <a href="./" class="brand brand-lockup" aria-label="CurioSphere home">
+          <svg class="mascot-mark" viewBox="0 0 100 100" role="img" aria-label="Curio the CurioSphere owl" xmlns="http://www.w3.org/2000/svg"><path d="M18 38 12 12 36 25Q50 17 64 25L88 12 82 39Q91 53 84 73 75 92 50 94 25 92 16 73 9 54 18 38Z" fill="#24375b" stroke="#65e0cf" stroke-width="2.5"/><path d="M22 39 29 27 43 36 39 49 24 51Z" fill="#516b9b"/><path d="M78 39 71 27 57 36 61 49 76 51Z" fill="#516b9b"/><ellipse cx="35" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="65" cy="52" rx="17" ry="19" fill="#f3c36b"/><ellipse cx="36" cy="53" rx="9" ry="12" fill="#10182b"/><ellipse cx="64" cy="53" rx="9" ry="12" fill="#10182b"/><circle cx="39" cy="48" r="3.5" fill="#fff7df"/><circle cx="67" cy="48" r="3.5" fill="#fff7df"/><path d="M45 67 55 67 50 76Z" fill="#ffad4a"/><path d="M34 80Q50 86 66 80" fill="none" stroke="#9b8cff" stroke-width="3" stroke-linecap="round"/><path d="M50 21 53 28 61 29 55 34 57 42 50 37 43 42 45 34 39 29 47 28Z" fill="#65e0cf" stroke="#b8fff5" stroke-width="1.5"/></svg>
+          <span class="brand-wordmark">Curio<span>Sphere</span></span>
         </a>
 
         <p>
@@ -2100,22 +2189,21 @@ document.querySelectorAll("[data-filter-category]").forEach(widget => {
   });
 });
 
-/* Search: send the entered words to Google without a site: restriction */
+/* Search published CurioSphere articles locally */
 if (searchForm && searchInput) {
   searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
+    activeQuery = searchInput.value.trim();
+    activeCategory = "";
+    renderArticles();
+    document.getElementById("latest").scrollIntoView({ behavior: "smooth" });
+  });
 
-    const query = searchInput.value.trim();
-
-    if (!query) {
-      searchInput.focus();
-      return;
+  searchInput.addEventListener("input", function () {
+    if (!searchInput.value.trim() && activeQuery) {
+      activeQuery = "";
+      renderArticles();
     }
-
-    const googleSearchURL =
-      "https://www.google.com/search?q=" + encodeURIComponent(query);
-
-    window.open(googleSearchURL, "_blank", "noopener,noreferrer");
   });
 }
 
@@ -2128,6 +2216,25 @@ document.getElementById("clearFilter").addEventListener("click", () => {
 
   renderArticles();
 });
+
+
+/* Date-based quote of the day. These are original CurioSphere lines. */
+const dailyThoughts = [
+  "Curiosity turns ordinary moments into extraordinary discoveries.",
+  "A good question can open a door that answers alone cannot.",
+  "Learn a little today; see the world differently tomorrow.",
+  "The first step towards discovery is noticing what others overlook.",
+  "Knowledge grows when you stay curious and keep asking why.",
+  "Big ideas often begin with a small observation.",
+  "Every new skill starts with the courage to be a beginner."
+];
+const thoughtIndex = Math.floor(Date.now() / 86400000) % dailyThoughts.length;
+const quoteText = document.getElementById("quoteText");
+const quoteSource = document.getElementById("quoteSource");
+const quoteDay = document.getElementById("quoteDay");
+if (quoteText) quoteText.textContent = dailyThoughts[thoughtIndex];
+if (quoteSource) quoteSource.textContent = "A CurioSphere original";
+if (quoteDay) quoteDay.textContent = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "short" }).toUpperCase();
 
 /* Footer year */
 

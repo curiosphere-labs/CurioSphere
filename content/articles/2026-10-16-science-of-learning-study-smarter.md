@@ -6,6 +6,7 @@ category: "Education & Learning"
 author: "CurioSphere Editorial Team"
 status: "Published"
 featured: false
+image: "https://res.cloudinary.com/fffbarnb/image/upload/v1792129522/The_Science_of_Learning__Study_Smarter.png"
 tags:
   - Learning Science
   - Study Skills

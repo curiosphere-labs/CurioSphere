@@ -1,3 +1,4 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +62,7 @@ img {
 }
 
 .container {
-  width: min(1200px, 92%);
+  width: min(1350px, 94%);
   margin: auto;
 }
 
@@ -130,23 +131,74 @@ header {
 .quote-source{color:var(--muted);font-size:12px;}
 .quote-day{color:var(--muted);font-size:11px;white-space:nowrap;}
 .mascot-hero{width:min(220px,70%);height:auto;filter:drop-shadow(0 15px 25px rgba(0,0,0,.35));}
-.feature-band{padding:30px 0;}
-.feature-band-card{display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:25px;overflow:hidden;border:1px solid var(--border);border-radius:22px;background:linear-gradient(105deg,#f3d7aa,#f7e9d1 58%,#e9c59b);color:#182033;}
-.feature-band-art{height:180px;display:grid;place-items:center;background:linear-gradient(145deg,#e7b777,#f6dfb9);font-size:78px;}
-.feature-band-copy{padding:22px 0;}
-.feature-band-copy .kicker{color:#8c3c2a;margin-bottom:6px;}
-.feature-band-copy h2{margin:0 0 7px;font-size:clamp(22px,3vw,30px);line-height:1.2;}
-.feature-band-copy p{margin:0;color:#3e4554;font-size:13px;}
-.feature-band-copy .episode-line{margin-top:10px;font-weight:800;font-size:13px;color:#273248;}
-.feature-band-action{padding:22px;}
 .picks-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
 .pick-card{display:flex;flex-direction:column;min-width:0;padding:18px;border:1px solid var(--border);border-radius:17px;background:var(--surface);}
 .pick-icon{font-size:30px;}
 .pick-card h3{margin:10px 0 6px;font-size:15px;line-height:1.35;}
 .pick-card p{margin:0;color:var(--muted);font-size:12px;}
 .pick-note{margin-top:18px;color:var(--muted);font-size:11px;}
-@media(max-width:850px){.feature-band-card{grid-template-columns:125px 1fr;}.feature-band-art{height:100%;min-height:160px;font-size:60px}.feature-band-action{grid-column:1/-1;padding:0 20px 20px}.picks-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:600px){.quote-card{grid-template-columns:auto 1fr;gap:12px;padding:14px}.quote-day{grid-column:2}.quote-mascot{width:46px;height:46px}.quote-mascot .mascot-mark{width:40px;height:40px}.feature-band-card{grid-template-columns:1fr}.feature-band-art{height:110px;min-height:110px}.feature-band-copy{padding:18px 20px 10px}.feature-band-action{padding:0 20px 20px}.picks-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:850px){.picks-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.quote-card{grid-template-columns:auto 1fr;gap:12px;padding:14px}.quote-day{grid-column:2}.quote-mascot{width:46px;height:46px}.quote-mascot .mascot-mark{width:40px;height:40px}picks-grid{grid-template-columns:1fr 1fr}}
+
+/* CURIO ANIMATION: subtle, lightweight and accessible */
+@keyframes curio-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+@keyframes curio-glow {
+  0%, 100% { opacity: .72; box-shadow: 0 0 12px rgba(101,224,207,.38); }
+  50% { opacity: 1; box-shadow: 0 0 24px rgba(101,224,207,.72); }
+}
+@keyframes curio-orbit-breathe {
+  0%, 100% { transform: scale(1); opacity: .72; }
+  50% { transform: scale(1.045); opacity: 1; }
+}
+.orbit-center .mascot-mark {
+  animation: curio-float 4.8s ease-in-out infinite;
+  transform-origin: center;
+}
+.orbit-dot { animation: curio-glow 2.8s ease-in-out infinite; }
+.orbit::before { animation: curio-orbit-breathe 5.5s ease-in-out infinite; }
+.brand-lockup .mascot-mark,
+.quote-mascot .mascot-mark { transition: transform .25s ease, filter .25s ease; }
+.brand-lockup:hover .mascot-mark,
+.quote-mascot:hover .mascot-mark {
+  transform: translateY(-3px) rotate(-5deg);
+  filter: drop-shadow(0 0 12px rgba(101,224,207,.45));
+}
+.category-card,
+.pick-card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.category-card:hover,
+.pick-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(101,224,207,.5);
+  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+}
+.dhiquest-coming { display: inline-flex; align-items: center; gap: 7px; }
+.dhiquest-coming::after {
+  content: "COMING SOON";
+  display: inline-block;
+  padding: 4px 7px;
+  border: 1px solid rgba(101,224,207,.35);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .7px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-center .mascot-mark,
+  .orbit-dot,
+  .orbit::before { animation: none !important; }
+  .brand-lockup .mascot-mark,
+  .quote-mascot .mascot-mark,
+  .category-card,
+  .pick-card { transition: none !important; }
+  .category-card:hover,
+  .pick-card:hover { transform: none !important; }
+}
 
 /* HERO */
 
@@ -467,8 +519,8 @@ section {
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 17px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .category {
@@ -669,8 +721,8 @@ section {
 
 .articles {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 23px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
 }
 
 .article-card {
@@ -1045,17 +1097,16 @@ footer h3 {
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#categories">Explore</a>
       <a href="#featured">Featured</a>
-      <a href="#daily-stories">Daily stories</a>
       <a href="#categories">Categories</a>
       <a href="#latest">Latest stories</a>
       <a href="#curiosphere-picks">Picks</a>
 
       <a
-        class="nav-button"
+        class="nav-button dhiquest-coming"
         href="https://sites.google.com/view/sankhanil/compete"
         target="_blank"
         rel="noopener noreferrer">
-        Explore DhiQuest ↗
+        DhiQuest
       </a>
     </nav>
 
@@ -1267,24 +1318,7 @@ footer h3 {
     </div>
   </section>
 
-
-  <!-- DAILY STORY SERIES: placeholder until the first episode is published -->
-  <section class="feature-band" id="daily-stories" aria-labelledby="dailyStoriesTitle">
-    <div class="container">
-      <div class="feature-band-card">
-        <div class="feature-band-art" aria-hidden="true">🇮🇳</div>
-        <div class="feature-band-copy">
-          <span class="kicker">CurioSphere original series</span>
-          <h2 id="dailyStoriesTitle">Unsung Heroes of India</h2>
-          <p>Meet the people whose courage, ideas and quiet determination helped shape our world.</p>
-          <div class="episode-line">Coming soon · Short, researched stories with one new perspective at a time.</div>
-        </div>
-        <div class="feature-band-action"><a class="button-primary" href="#latest">Explore published stories →</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED ARTICLE -->
+<!-- FEATURED ARTICLE -->
 
   <section id="featured" style="padding-top:10px">
     <div class="container">
@@ -1409,11 +1443,11 @@ footer h3 {
         </div>
 
         <a
-          class="button-primary"
+          class="button-primary dhiquest-coming"
           href="https://sites.google.com/view/sankhanil/compete"
           target="_blank"
           rel="noopener noreferrer">
-          Visit DhiQuest ↗
+          DhiQuest
         </a>
 
       </div>
@@ -1461,9 +1495,10 @@ footer h3 {
         <div class="footer-links">
           <a
             href="https://sites.google.com/view/sankhanil/compete"
+            class="dhiquest-coming"
             target="_blank"
             rel="noopener noreferrer">
-            DhiQuest ↗
+            DhiQuest
           </a>
 
           <a href="#categories">Explore topics</a>
@@ -2233,3 +2268,4 @@ loadArticles();
 
 </body>
 </html>
+```

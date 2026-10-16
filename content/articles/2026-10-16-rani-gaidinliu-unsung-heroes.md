@@ -5,7 +5,7 @@ date: "2026-10-16"
 category: "India & Culture"
 subcategory: "Unsung Heroes of India"
 author: "CurioSphere Editorial Team"
-status: "Draft"
+status: "Published"
 featured: "false"
 image: ""
 tags:
@@ -21,7 +21,7 @@ episode: "1"
 
 *An account of a young leader from Northeast India whose life became intertwined with community reform, resistance to colonial authority and a long struggle for freedom.*
 
-> **Editorial note:** This article is a carefully sourced draft. Please complete a final editorial review before changing its status to `Published`. Historical sources differ in some details and chronology; where possible, the wording below distinguishes official commemorative accounts from the historical record.
+> **Editorial note:** This article has been carefully researched and drafted using available historical records and published sources. However, accounts of historical events may vary across sources, and certain details or interpretations may differ. We have made every reasonable effort to present the information accurately and fairly, and welcome credible sources or corrections that may help improve this article..
 
 ## A young leader from Luangkao
 

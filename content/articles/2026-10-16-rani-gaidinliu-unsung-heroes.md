@@ -7,7 +7,7 @@ subcategory: "Unsung Heroes of India"
 author: "CurioSphere Editorial Team"
 status: "Published"
 featured: "false"
-image: ""
+image: "https://res.cloudinary.com/fffbarnb/image/upload/v1792165134/Rani_Gaidinliu__The_Young_Revolutionary.png"
 tags:
   - "Rani Gaidinliu"
   - "Indian freedom struggle"

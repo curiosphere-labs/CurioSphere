@@ -78,20 +78,20 @@ Remembering Gaidinliu responsibly means recognising her contribution without fla
 
 ## Sources and further reading
 
-1. **Press Information Bureau, Ministry of Tribal Affairs, Government of India.** “Union Minister of Home Affairs and Minister of Cooperation, Shri Amit Shah will lay Foundation Stone tomorrow of Rani Gaidinliu Tribal Freedom Fighters Museum in Luangkao Village, Tamenglong District, Manipur.” Published 21 November 2021.  
-   https://www.pib.gov.in/pressreleaseiframepage.aspx?lang=2&prid=1773746&reg=48
+1. **Press Information Bureau, Ministry of Tribal Affairs, Government of India. “Union Minister of Home Affairs and Minister of Cooperation, Shri Amit Shah will lay Foundation Stone tomorrow of Rani Gaidinliu Tribal Freedom Fighters Museum in Luangkao Village, Tamenglong District, Manipur.” Published 21 November 2021.
+[Read the official PIB release](https://www.pib.gov.in/pressreleaseiframepage.aspx?lang=2&prid=1773746&reg=48)
 
 2. **Ministry of Culture, Government of India — Azadi Ka Amrit Mahotsav.** “Rani Gaidinliu.”  
-   https://amritmahotsav.nic.in/unsung-heroes-detail.htm?56=
+   [https://amritmahotsav.nic.in/unsung-heroes-detail.htm?56=](https://amritmahotsav.nic.in/unsung-heroes-detail.htm?56=)
 
 3. **Press Information Bureau archive.** “Rani Gaidinliu: Daughter of the Hills.” This account contains a more detailed summary of the arrest, trial, conviction and imprisonment.  
-   https://pibindia.wordpress.com/2015/09/30/rani-gaidinliu-daughter-of-the-hills/
+   [https://pibindia.wordpress.com/2015/09/30/rani-gaidinliu-daughter-of-the-hills/](https://pibindia.wordpress.com/2015/09/30/rani-gaidinliu-daughter-of-the-hills/)
 
 4. **Longkumer, Arkotong.** “Religious and Economic Reform: The Gaidinliu Movement and the Heraka in the North Cachar Hills.” *South Asia: Journal of South Asian Studies*, vol. 30, no. 3 (2007), pp. 499–515.  
-   https://doi.org/10.1080/00856400701714096
+   [https://doi.org/10.1080/00856400701714096](https://doi.org/10.1080/00856400701714096)
 
 5. **The Nehru Archive.** “Rani Gaidinliu (14 December 1955).” Historical correspondence and context relating to Gaidinliu.  
-   https://nehruarchive.in/documents/rani-gaidinliu-14-december-1955-1gn6vj
+   [https://nehruarchive.in/documents/rani-gaidinliu-14-december-1955-1gn6vj](https://nehruarchive.in/documents/rani-gaidinliu-14-december-1955-1gn6vj)
 
 ## Image credit
 

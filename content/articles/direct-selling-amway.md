@@ -35,9 +35,6 @@ The model can offer customers personal service and product explanations. It may 
 
 ### Direct selling, MLM and pyramid schemes
 
-
-### Direct selling, MLM and pyramid schemes
-
 **Direct selling**
 - **Meaning:** Products or services are sold directly to consumers.
 - **What to examine:** Product quality, customer demand, pricing and consumer rights.

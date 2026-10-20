@@ -239,30 +239,22 @@ Perhaps the most meaningful lesson of Mount Kailash is that a place can inspire 
 
 ## References and further reading
 
-The following sources provide starting points for verifying the geography, pilgrimage context and cultural significance discussed in this article.
 
-1. **Government of India — Ministry of External Affairs:** Kailash Manasarovar Yatra official portal.  
-   https://kmy.gov.in/?lang=en
+1. [Government of India — Ministry of External Affairs: Kailash Manasarovar Yatra](https://kmy.gov.in/?lang=en)
 
-2. **District Administration, Pithoragarh, Uttarakhand:** Mount Kailash.  
-   https://pithoragarh.nic.in/mount-kailash/
+2. [District Administration, Pithoragarh: Mount Kailash](https://pithoragarh.nic.in/mount-kailash/)
 
-3. **Uttarakhand Tourism:** Kailash Manasarovar.  
-   https://www.uttarakhandtourism.gov.in/explore/kailash-mansarovar
+3. [Uttarakhand Tourism: Kailash Manasarovar](https://www.uttarakhandtourism.gov.in/explore/kailash-mansarovar)
 
-4. **Ministry of External Affairs, Government of India:** Kailash Manasarovar Yatra FAQs.  
-   https://www.mea.gov.in/faq-kmy.htm
+4. [Ministry of External Affairs: Kailash Manasarovar Yatra FAQs](https://www.mea.gov.in/faq-kmy.htm)
 
-5. **District Administration, Kumaon:** Kailash Manasarovar Yatra.  
-   https://kumaon.gov.in/places-centres/kailash-mansarovar-yatra/
+5. [District Administration, Kumaon: Kailash Manasarovar Yatra](https://kumaon.gov.in/places-centres/kailash-mansarovar-yatra/)
 
-6. **Wildlife Institute of India:** Research publications on the Kailash Sacred Landscape.  
-   https://wii.gov.in/images/images/documents/publications/rr_2021_low_high_grazinglands_kailash_sacred_Landscape.pdf
+6. [Wildlife Institute of India: Kailash Sacred Landscape research](https://wii.gov.in/images/images/documents/publications/rr_2021_low_high_grazinglands_kailash_sacred_Landscape.pdf)
 
-7. **Wikimedia Commons:** Mount Kailash image collection and individual media pages.  
-   https://commons.wikimedia.org/wiki/Category:Mount_Kailash
+7. [Wikimedia Commons: Mount Kailash image collection](https://commons.wikimedia.org/wiki/Category:Mount_Kailash)
 
-8. **National Library of Medicine / PubMed Central:** Research discussing hair and nail growth myths and related biological evidence. This is general background, not a study of Mount Kailash itself.  
-   https://pmc.ncbi.nlm.nih.gov/articles/PMC2151163/
+8. [PubMed Central: Research on hair and nail growth myths](https://pmc.ncbi.nlm.nih.gov/articles/PMC2151163/)
 
-*Editorial note: Religious narratives are described as traditions and beliefs. Claims about physical phenomena are presented according to the availability of verifiable scientific evidence. Travel requirements and pilgrimage dates can change; consult official sources before planning a journey.*
+*Note: The final reference provides general background on hair and nail growth; it is not a study of Mount Kailash.*
+

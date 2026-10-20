@@ -35,12 +35,24 @@ The model can offer customers personal service and product explanations. It may 
 
 ### Direct selling, MLM and pyramid schemes
 
-| Model | Meaning | What to examine |
-|---|---|---|
-| Direct selling | Products or services are sold directly to consumers. | Product quality, customer demand, pricing and consumer rights. |
-| Single-level direct selling | Compensation is primarily linked to an individual's own sales. | Margins, expenses and repeat customers. |
-| Multi-level marketing (MLM) | Compensation may include commissions related to personal sales and sales activity in a sponsored network. | The actual compensation plan, retail demand and substantiated earnings claims. |
-| Pyramid or money-circulation scheme | Rewards depend primarily on recruitment or participant payments rather than genuine sales to end customers. | Recruitment-linked rewards, compulsory purchases and lack of real consumer demand. |
+
+### Direct selling, MLM and pyramid schemes
+
+**Direct selling**
+- **Meaning:** Products or services are sold directly to consumers.
+- **What to examine:** Product quality, customer demand, pricing and consumer rights.
+
+**Single-level direct selling**
+- **Meaning:** Compensation is primarily linked to an individual's own sales.
+- **What to examine:** Margins, expenses and repeat customers.
+
+**Multi-level marketing (MLM)**
+- **Meaning:** Compensation may include commissions related to personal sales and sales activity in a sponsored network.
+- **What to examine:** The actual compensation plan, retail demand and substantiated earnings claims.
+
+**Pyramid or money-circulation scheme**
+- **Meaning:** Rewards depend primarily on recruitment or participant payments rather than genuine sales to end customers.
+- **What to examine:** Recruitment-linked rewards, compulsory purchases and lack of real consumer demand.
 
 The labels are not a substitute for examining actual conduct. The presence of a product does not automatically make a scheme legitimate, and direct selling should not automatically be equated with a pyramid scheme.
 
@@ -72,14 +84,12 @@ Amway subsequently expanded into areas including home care, beauty and nutrition
 
 ### Key milestones
 
-| Period | Milestone |
-|---|---|
-| 1959 | Amway was founded by Rich DeVos and Jay Van Andel. |
-| 1960s | The company developed its product portfolio and expanded beyond its original market. |
-| 1968 | Amway introduced its Artistry beauty range, according to its company history. |
-| 1970s | Amway acquired Nutrilite, expanding its nutrition portfolio. |
-| Following decades | The company expanded internationally and added more product categories. |
-| Digital era | Online ordering and digital communication became increasingly important to direct-selling operations. |
+- **1959:** Amway was founded by Rich DeVos and Jay Van Andel.
+- **1960s:** The company developed its product portfolio and expanded beyond its original market.
+- **1968:** Amway introduced its Artistry beauty range, according to its company history.
+- **1970s:** Amway acquired Nutrilite, expanding its nutrition portfolio.
+- **Following decades:** The company expanded internationally and added more product categories.
+- **Digital era:** Online ordering and digital communication became increasingly important to direct-selling operations.
 
 These are company-history summaries, not an independent audit of sales, product efficacy or business-owner outcomes.
 
